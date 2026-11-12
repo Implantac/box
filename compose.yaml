@@ -1,0 +1,28 @@
+services:
+  box:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_APP_MODE: ${NEXT_PUBLIC_APP_MODE:-portfolio}
+    environment:
+      APP_MODE: ${APP_MODE:-portfolio}
+      NEXT_PUBLIC_APP_MODE: ${NEXT_PUBLIC_APP_MODE:-portfolio}
+      APP_ORIGIN: ${APP_ORIGIN:-http://localhost:3000}
+      SUPABASE_URL: ${SUPABASE_URL:-}
+      SUPABASE_PUBLISHABLE_KEY: ${SUPABASE_PUBLISHABLE_KEY:-}
+      BOX_WORKSPACE_ID: ${BOX_WORKSPACE_ID:-}
+      NEXT_TELEMETRY_DISABLED: "1"
+    restart: unless-stopped
+    # Somente interface local. Em uma VPS, use proxy HTTPS; não exponha 3000 na internet.
+    ports:
+      - "127.0.0.1:3000:3000"
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

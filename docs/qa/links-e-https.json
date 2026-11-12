@@ -1,0 +1,169 @@
+{
+  "date": "2026-11-12",
+  "links": [
+    {
+      "path": "/painel",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/cambio-automatico",
+      "status": 200
+    },
+    {
+      "path": "/painel/ordens",
+      "status": 200
+    },
+    {
+      "path": "/cliente",
+      "status": 200
+    },
+    {
+      "path": "/bio",
+      "status": 200
+    },
+    {
+      "path": "/privacidade",
+      "status": 200
+    },
+    {
+      "path": "/painel/atendimentos",
+      "status": 200
+    },
+    {
+      "path": "/painel/agenda",
+      "status": 200
+    },
+    {
+      "path": "/painel/clientes",
+      "status": 200
+    },
+    {
+      "path": "/painel/orcamentos",
+      "status": 200
+    },
+    {
+      "path": "/painel/financeiro",
+      "status": 200
+    },
+    {
+      "path": "/painel/conteudo",
+      "status": 200
+    },
+    {
+      "path": "/painel/relatorios",
+      "status": 200
+    },
+    {
+      "path": "/painel/configuracoes",
+      "status": 200
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000041",
+      "status": 200
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000042",
+      "status": 200
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000043",
+      "status": 200
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000044",
+      "status": 200
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000045",
+      "status": 200
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000046",
+      "status": 200
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000047",
+      "status": 200
+    },
+    {
+      "path": "/guia",
+      "status": 200
+    }
+  ],
+  "anchors": [
+    {
+      "route": "/",
+      "href": "#contato",
+      "exists": true
+    },
+    {
+      "route": "/",
+      "href": "#servicos",
+      "exists": true
+    },
+    {
+      "route": "/painel",
+      "href": "#main-content",
+      "exists": true
+    },
+    {
+      "route": "/painel/ordens",
+      "href": "#main-content",
+      "exists": true
+    },
+    {
+      "route": "/painel/clientes",
+      "href": "#main-content",
+      "exists": true
+    },
+    {
+      "route": "/painel/agenda",
+      "href": "#main-content",
+      "exists": true
+    },
+    {
+      "route": "/painel/atendimentos",
+      "href": "#main-content",
+      "exists": true
+    },
+    {
+      "route": "/painel/orcamentos",
+      "href": "#main-content",
+      "exists": true
+    },
+    {
+      "route": "/painel/financeiro",
+      "href": "#main-content",
+      "exists": true
+    },
+    {
+      "route": "/painel/conteudo",
+      "href": "#main-content",
+      "exists": true
+    },
+    {
+      "route": "/painel/relatorios",
+      "href": "#main-content",
+      "exists": true
+    },
+    {
+      "route": "/painel/configuracoes",
+      "href": "#main-content",
+      "exists": true
+    }
+  ],
+  "errors": [],
+  "temporaryPreview": {
+    "url": "https://3000-iwe2vzmzkvwmeeik6dneb.e2b.app",
+    "status": 403,
+    "protocol": "https:",
+    "anonymousPublicAccess": false,
+    "applicationFlowTestedExternally": false,
+    "reason": "Missing traffic access token · E2B",
+    "note": "A URL direta é protegida pela infraestrutura. Não foi tentado contorno nem lido/publicado token. A prévia integrada da Arena é gerenciada pela plataforma; os fluxos foram testados localmente."
+  }
+}

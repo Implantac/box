@@ -1,0 +1,5 @@
+import { createServerClient } from '@supabase/ssr';
+import { NextResponse, type NextRequest } from 'next/server';
+// Renovação de sessão, não uma fronteira de autorização. APIs e RLS verificam acesso.
+export async function proxy(request:NextRequest){let response=NextResponse.next({request});if(process.env.APP_MODE!=='connected'||!process.env.SUPABASE_URL||!process.env.SUPABASE_PUBLISHABLE_KEY)return response;const client=createServerClient(process.env.SUPABASE_URL,process.env.SUPABASE_PUBLISHABLE_KEY,{cookieOptions:{httpOnly:true,secure:process.env.NODE_ENV==='production',sameSite:'lax',path:'/'},cookies:{getAll:()=>request.cookies.getAll(),setAll(items){items.forEach(({name,value})=>request.cookies.set(name,value));response=NextResponse.next({request});items.forEach(({name,value,options})=>response.cookies.set(name,value,{...options,httpOnly:true,secure:process.env.NODE_ENV==='production',sameSite:'lax',path:'/'}));}}});await client.auth.getUser();response.headers.set('Cache-Control','private, no-store');return response;}
+export const config={matcher:['/painel/:path*','/cliente/:path*','/entrar/:path*','/api/workspace','/api/auth/:path*']};

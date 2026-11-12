@@ -1,0 +1,15 @@
+node_modules
+.next
+.git
+.env
+.env.*
+!.env.example
+backups
+artifacts
+test-results
+playwright-report
+docs/qa
+docs/dependency-audit-inicial.json
+*.zip
+*.log
+*.tsbuildinfo

@@ -1,0 +1,14 @@
+# Exemplo para Caddy instalado NA VPS, fora do compose.
+# Substitua o domínio pelo seu domínio validado e aponte A/AAAA para a VPS.
+# Não execute sem revisar outros sites/portas existentes.
+seu-dominio.example {
+    encode zstd gzip
+    reverse_proxy 127.0.0.1:3000
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy strict-origin-when-cross-origin
+        # Ative HSTS apenas quando domínio, HTTPS e subdomínios estiverem validados.
+        # Strict-Transport-Security "max-age=31536000"
+    }
+    # Sem access_log com corpo/credenciais. Defina retenção técnica com o responsável.
+}

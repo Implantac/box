@@ -1,0 +1,31 @@
+import {beforeAll,beforeEach,afterEach,afterAll,describe,it,expect,vi} from 'vitest';
+import type {PGlite} from '@electric-sql/pglite';
+import {fixtureDatabase,asUser,users,workspaceId} from './helpers/database';
+import {sid,createSeed} from '@/lib/seed';
+import type {Role} from '@/lib/model';
+vi.mock('@/lib/server/auth',async importOriginal=>{const actual=await importOriginal<typeof import('@/lib/server/auth')>();return {...actual,authContext:vi.fn()};});
+import {authContext,HttpError} from '@/lib/server/auth';
+import {GET,POST} from '@/app/api/workspace/route';
+let db:PGlite;
+const auth=vi.mocked(authContext);
+beforeAll(async()=>{vi.stubEnv('APP_MODE','connected');vi.stubEnv('NEXT_PUBLIC_APP_MODE','connected');vi.stubEnv('APP_ORIGIN','https://box.example');vi.stubEnv('SUPABASE_URL','https://dedicado.example');vi.stubEnv('SUPABASE_PUBLISHABLE_KEY','publishable_test_not_a_real_key');vi.stubEnv('BOX_WORKSPACE_ID',workspaceId);db=await fixtureDatabase();},60000);
+async function useRole(role:Role){await asUser(db,role);const client={rpc:async(name:string,args:Record<string,unknown>)=>{try{const sql=name==='box_read_workspace'?'SELECT public.box_read_workspace($1) AS data':'SELECT public.box_command($1,$2,$3::jsonb) AS data';const params=name==='box_read_workspace'?[args.p_workspace]:[args.p_workspace,args.p_expected_revision,JSON.stringify(args.p_command)];const result=await db.query<{data:unknown}>(sql,params);return{data:result.rows[0].data,error:null};}catch(e){return{data:null,error:{code:(e as {code:string}).code}};}}};auth.mockResolvedValue({client,user:{id:users[role]},member:{},session:{role,name:'Usuário fictício',workspaceId,userId:users[role]}} as unknown as Awaited<ReturnType<typeof authContext>>);}
+beforeEach(async()=>{await db.exec('BEGIN');await useRole('owner');});
+afterEach(async()=>{await db.exec('ROLLBACK;RESET ROLE;');vi.clearAllMocks();});
+afterAll(async()=>{await db?.close();vi.unstubAllEnvs();});
+const req=(body:unknown,origin='https://box.example')=>new Request('https://box.example/api/workspace',{method:'POST',headers:{Origin:origin,'Content-Type':'application/json'},body:JSON.stringify(body)});
+describe('API workspace: camada HTTP + banco local com identidade de teste',()=>{
+ it('retorna 401 sem autenticação, sem dados',async()=>{auth.mockRejectedValue(new HttpError('Entre com sua conta.',401,'UNAUTHENTICATED'));const r=await GET();expect(r.status).toBe(401);expect((await r.json()).state).toBeUndefined();});
+ it.each(['owner','reception','technician','finance','marketing','customer'] as Role[])('GET aplica RLS para %s',async role=>{await useRole(role);const r=await GET();expect(r.status).toBe(200);expect(r.headers.get('cache-control')).toContain('no-store');const data=await r.json();if(role==='customer'){expect(data.state.customers.map((x:{id:string})=>x.id)).toEqual([sid(3)]);expect(data.state.orders).toHaveLength(1);}if(role==='marketing'){expect(data.state.customers).toEqual([]);expect(data.state.orders).toEqual([]);}if(role==='technician')expect(data.state.orders.every((x:{technician:string})=>x.technician==='Lucas • demo')).toBe(true);});
+ it('origem externa é rejeitada antes da escrita',async()=>{const r=await POST(req({revision:1,command:{type:'update_settings',settings:createSeed().settings}},'https://outro.example'));expect(r.status).toBe(403);expect(auth).not.toHaveBeenCalled();});
+ it('origem malformada é rejeitada, sem erro interno',async()=>{const r=await POST(req({},'null'));expect(r.status).toBe(403);});
+ it('papel e vínculo forjados não entram no contrato',async()=>{const r=await POST(req({revision:1,role:'owner',command:{type:'set_quote_status',id:sid(62),status:'aprovado',customerId:sid(3)}}));expect(r.status).toBe(422);});
+ it('técnico não altera OS de outra pessoa pela API',async()=>{await useRole('technician');const r=await POST(req({revision:1,command:{type:'transition_order',id:sid(42),status:'testes'}}));expect(r.status).toBe(403);});
+ it('marketing não altera configurações pela API',async()=>{await useRole('marketing');const r=await POST(req({revision:1,command:{type:'update_settings',settings:createSeed().settings}}));expect(r.status).toBe(403);});
+ it('revisão antiga vira conflito 409',async()=>{const r=await POST(req({revision:9,command:{type:'update_settings',settings:createSeed().settings}}));expect(r.status).toBe(409);expect((await r.json()).code).toBe('REVISION_CONFLICT');});
+ it('cliente aprova somente orçamento vinculado pela identidade do servidor',async()=>{await useRole('customer');const r=await POST(req({revision:1,command:{type:'set_quote_status',id:sid(62),status:'aprovado'}}));expect(r.status).toBe(200);const data=await(await GET()).json();expect(data.state.quotes[0].status).toBe('aprovado');});
+ it('cliente não aprova orçamento de outra conta pela API',async()=>{await db.exec('RESET ROLE');await db.query('UPDATE public.box_members SET customer_id=$1 WHERE user_id=$2',[sid(1),users.customer]);await useRole('customer');const r=await POST(req({revision:1,command:{type:'set_quote_status',id:sid(62),status:'aprovado'}}));expect(r.status).toBe(403);});
+ it('modo conectado não transforma simulação social em sucesso real',async()=>{const r=await POST(req({revision:1,command:{type:'simulate_post',id:sid(141)}}));expect(r.status).toBe(403);expect((await r.json()).code).toBe('INTEGRATION_DISABLED');});
+ it('corpo excedente é rejeitado',async()=>{const r=await POST(req({revision:1,command:{type:'x',text:'a'.repeat(41000)}}));expect(r.status).toBe(413);});
+ it('JSON inválido é rejeitado',async()=>{const r=await POST(new Request('https://box.example/api/workspace',{method:'POST',headers:{Origin:'https://box.example','Content-Type':'application/json'},body:'{'}));expect(r.status).toBe(400);});
+});
