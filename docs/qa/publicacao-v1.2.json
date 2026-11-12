@@ -1,0 +1,140 @@
+{
+  "checkedAt": "2026-11-12T21:00:01.861405+00:00",
+  "version": "1.2.0",
+  "status": "github_and_vercel_updated_supabase_deferred",
+  "authorizedScope": "Update Box only; preserve portfolio mode and all other projects",
+  "github": {
+    "repository": "Implantac/box",
+    "branch": "main",
+    "applicationCommit": "20c7dda337e0071ec2fd0ac0b71f33fe13894437",
+    "applicationCommitURL": "https://github.com/Implantac/box/commit/20c7dda337e0071ec2fd0ac0b71f33fe13894437",
+    "previousCommit": "f261c49b4c302f9894dce1f1b04cc2966890f746",
+    "fastForwardPushVerified": true,
+    "forcePush": false,
+    "historyPreserved": true,
+    "approvedSnapshotFiles": 240,
+    "sourceHashesVerifiedAtApplicationCommit": 135,
+    "publicationDocumentationFollowupOnly": true,
+    "ciURL": "https://github.com/Implantac/box/actions/runs/43304260129",
+    "ciConclusion": "success",
+    "unitTestsPassed": 347,
+    "unitTestFiles": 14,
+    "ciBrowserTests": {
+      "startTime": "2026-11-12T20:52:00.559Z",
+      "duration": 164709.59399999998,
+      "expected": 122,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "vercel": {
+    "project": "box-portfolio",
+    "projectId": "prj_s2lz8fMNbxGAR6qJye5KHu5gxBFc",
+    "teamId": "team_1A1MXMKRlbBUFJJTs5xjNKrk",
+    "deploymentId": "dpl_988RpaNgPKMfggoCttBBHRm22FYj",
+    "applicationCommit": "20c7dda337e0071ec2fd0ac0b71f33fe13894437",
+    "state": "READY",
+    "substate": "PROMOTED",
+    "publicURL": "https://box-portfolio-orpin.vercel.app",
+    "deploymentURL": "https://box-portfolio-50y31hkvq-implantacs-projects.vercel.app",
+    "createdAt": "2026-11-12T20:50:41.490Z",
+    "readyAt": "2026-11-12T20:51:54.238Z",
+    "effectiveNodeVersion": "22.x",
+    "nextVersion": "16.4.6",
+    "plan": "hobby",
+    "projectCreated": false,
+    "planChanged": false,
+    "ssoProtectionChanged": false,
+    "automaticGitDeployment": "disabled"
+  },
+  "supabase": {
+    "checkedAt": "2026-11-12T20:58:57.722464+00:00",
+    "status": "deferred_by_user",
+    "decision": "Deixar o Supabase pendente",
+    "dedicatedBoxProjectVisible": false,
+    "projectCreated": false,
+    "sqlExecutedRemotely": false,
+    "migrationsAppliedRemotely": [],
+    "applicationMode": "portfolio",
+    "databaseConnection": "not-used",
+    "otherProjectsPreserved": [
+      "AGROTECH",
+      "VELT"
+    ],
+    "migrationFilesVersionedOnly": {
+      "supabase/migrations/202611120001_box_core.sql": "0a9b58f1b02e6fad4da7be2621563eef3a9595e7ffd3adb262e4cd5dcae1ce19",
+      "supabase/migrations/202611120002_validation_and_public_content.sql": "f61c4e62a6518849dd412f207ac7d36be7fc55f458c63d1f9fe31cdf3bc0cb89",
+      "supabase/migrations/202611120003_inventory_team_commissions.sql": "1f8051f2bd71c6e307ee418e6eba5f765e8c3a7c96f2f53d43bfb6c680b02549",
+      "supabase/migrations/202611120004_fiscal_readiness.sql": "f77d1a523623aa4b752955fbcbbe827fcc2cbbdd25bbff6882dd634c06cc3f87"
+    }
+  },
+  "publicVerification": {
+    "anonymous": true,
+    "health": {
+      "application": "box-oficina-portfolio",
+      "version": "1.2.0",
+      "mode": "portfolio",
+      "applicationReady": true,
+      "databaseConnection": "not-used",
+      "socialPublishing": "disabled",
+      "fiscalIssuance": "disabled",
+      "productionApproved": false
+    },
+    "browserTests": {
+      "startTime": "2026-11-12T20:54:47.005Z",
+      "duration": 219395.888,
+      "expected": 122,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "http200Routes": 28,
+    "renderedPageRoutes": 27,
+    "homeViewportsPassed": 8,
+    "fiscalAndReadinessLayoutsPassed": 16,
+    "browserErrors": [],
+    "assetErrors": [],
+    "tlsVerified": true,
+    "noindexVerified": true,
+    "logoUnchanged": true,
+    "logoSHA256": "65336cbd26e0abf4a18ad313fca271084c1488400674c7280db6e32208074959",
+    "protectedAPIsReturned403": true,
+    "missingPathsAndEnvReturned404": true
+  },
+  "preservation": {
+    "archiveSHA256": {
+      "1.0": "4801e4498684fee1d32b9e98fb2c085c9c0c60d24484f8e7a76771464e3526bd",
+      "1.1": "d330a9895739c2909b6fdb920be988039fdc9af4c48d46f260f1a480a7a40071",
+      "1.1.1": "e65112d73dcf570df925e0112e8f620355701b616f9fb78829cc87caa81053da",
+      "1.2": "a80382a08e2ac912c718306132efca880fc8dc8b4c2c23b08c54741d816d5674"
+    },
+    "allArchivesVerified": true,
+    "deliveredGuidesOverwritten": false,
+    "otherProjectsModified": false,
+    "secretsAddedToRepository": false,
+    "paidPlanContracted": false
+  },
+  "limits": {
+    "mode": "portfolio",
+    "productionApproved": false,
+    "fiscalIssuance": "disabled",
+    "socialPublishing": "disabled",
+    "remoteDatabaseVerified": false,
+    "realFiscalProviderImplemented": false,
+    "fiscalWorkerDeployed": false,
+    "realDataMigrationPerformed": false,
+    "fortySixPlanItemsDeclaredComplete": false
+  },
+  "evidence": {
+    "ci": "github-actions-v1.2.json",
+    "ciBrowserTests": "github-actions-playwright-v1.2.json",
+    "vercel": "vercel-ready-v1.2.json",
+    "supabase": "supabase-pendente-v1.2.json",
+    "http": "http-deploy-v1.2.json",
+    "browserSmoke": "deploy-v1.2.0-smoke.json",
+    "browserTests": "playwright-deploy-v1.2.json",
+    "homeLayout": "layout-deploy-v1.2.json",
+    "pagesAndNewLayouts": "paginas-deploy-v1.2.json"
+  }
+}

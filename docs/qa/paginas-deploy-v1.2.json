@@ -1,0 +1,314 @@
+{
+  "checkedAt": "2026-11-12T20:56:01.817Z",
+  "version": "1.2.0",
+  "base": "https://box-portfolio-orpin.vercel.app",
+  "anonymous": true,
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "h1": "Precisão em cada detalhe.\nConfiança em cada etapa.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/cambio-automatico",
+      "status": 200,
+      "h1": "Menos dúvidas.\nMais clareza sobre\no seu câmbio.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/bio",
+      "status": 200,
+      "h1": "O cuidado começa\ncom uma boa conexão.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/guia",
+      "status": 200,
+      "h1": "Seu projeto. Sua hospedagem. Limites bem definidos.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/privacidade",
+      "status": 200,
+      "h1": "Privacidade da\ndemonstração.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/entrar",
+      "status": 200,
+      "h1": "Entre na experiência.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/entrar/seguranca",
+      "status": 200,
+      "h1": "Confirme que é você.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/cliente",
+      "status": 200,
+      "h1": "Olá, Clara.\nCada etapa, mais clara.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel",
+      "status": 200,
+      "h1": "O dia começa com clareza.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/ordens",
+      "status": 200,
+      "h1": "Ordens de serviço",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/clientes",
+      "status": 200,
+      "h1": "Clientes e veículos",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/agenda",
+      "status": 200,
+      "h1": "Agenda da oficina",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/atendimentos",
+      "status": 200,
+      "h1": "Cada conversa tem um próximo passo.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/orcamentos",
+      "status": 200,
+      "h1": "Orçamentos com clareza.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/financeiro",
+      "status": 200,
+      "h1": "Clareza nos números.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/estoque",
+      "status": 200,
+      "h1": "Peças no lugar certo.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/mecanicos",
+      "status": 200,
+      "h1": "Equipe, tempo e execução.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/comissoes",
+      "status": 200,
+      "h1": "Serviço feito. Comissão clara.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/conteudo",
+      "status": 200,
+      "h1": "Uma ideia. Vários destinos.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/relatorios",
+      "status": 200,
+      "h1": "Números que fazem sentido.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/configuracoes",
+      "status": 200,
+      "h1": "Uma base bem organizada.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/fiscal",
+      "status": 200,
+      "h1": "Fiscal, sem atalhos.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/ativacao",
+      "status": 200,
+      "h1": "Do conceito à operação.",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000041",
+      "status": 200,
+      "h1": "Honda Civic 2019",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000042",
+      "status": 200,
+      "h1": "Volkswagen Golf 2017",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000043",
+      "status": 200,
+      "h1": "Toyota Corolla 2021",
+      "expectedHeading": true,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000048",
+      "status": 200,
+      "h1": "Ford EcoSport 2018",
+      "expectedHeading": true,
+      "noOverflow": true
+    }
+  ],
+  "newLayouts": [
+    {
+      "path": "/painel/fiscal",
+      "width": 1654,
+      "height": 900,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/ativacao",
+      "width": 1654,
+      "height": 900,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/fiscal",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/ativacao",
+      "width": 1440,
+      "height": 900,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/fiscal",
+      "width": 1366,
+      "height": 768,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/ativacao",
+      "width": 1366,
+      "height": 768,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/fiscal",
+      "width": 1024,
+      "height": 768,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/ativacao",
+      "width": 1024,
+      "height": 768,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/fiscal",
+      "width": 768,
+      "height": 1024,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/ativacao",
+      "width": 768,
+      "height": 1024,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/fiscal",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/ativacao",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/fiscal",
+      "width": 360,
+      "height": 800,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/ativacao",
+      "width": 360,
+      "height": 800,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/fiscal",
+      "width": 320,
+      "height": 740,
+      "status": 200,
+      "noOverflow": true
+    },
+    {
+      "path": "/painel/ativacao",
+      "width": 320,
+      "height": 740,
+      "status": 200,
+      "noOverflow": true
+    }
+  ],
+  "browserErrors": [],
+  "assetErrors": [],
+  "passed": true
+}

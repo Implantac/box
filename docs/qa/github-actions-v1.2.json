@@ -1,0 +1,144 @@
+{
+  "conclusion": "success",
+  "createdAt": "2026-11-12T20:50:25Z",
+  "databaseId": 43304260129,
+  "headSha": "20c7dda337e0071ec2fd0ac0b71f33fe13894437",
+  "jobs": [
+    {
+      "completedAt": "2026-11-12T20:54:52Z",
+      "conclusion": "success",
+      "databaseId": 131483230581,
+      "name": "check",
+      "startedAt": "2026-11-12T20:50:29Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-12T20:50:30Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-12T20:50:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T20:50:32Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-11-12T20:50:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T20:50:33Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v4",
+          "number": 3,
+          "startedAt": "2026-11-12T20:50:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T20:50:43Z",
+          "conclusion": "success",
+          "name": "Run npm ci --no-fund",
+          "number": 4,
+          "startedAt": "2026-11-12T20:50:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T20:50:43Z",
+          "conclusion": "success",
+          "name": "Run npm run preflight -- --json",
+          "number": 5,
+          "startedAt": "2026-11-12T20:50:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T20:50:51Z",
+          "conclusion": "success",
+          "name": "Run npm run typecheck",
+          "number": 6,
+          "startedAt": "2026-11-12T20:50:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T20:51:07Z",
+          "conclusion": "success",
+          "name": "Run npm test",
+          "number": 7,
+          "startedAt": "2026-11-12T20:50:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T20:51:23Z",
+          "conclusion": "success",
+          "name": "Run npm run build",
+          "number": 8,
+          "startedAt": "2026-11-12T20:51:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T20:51:59Z",
+          "conclusion": "success",
+          "name": "Run npx playwright install --with-deps chromium",
+          "number": 9,
+          "startedAt": "2026-11-12T20:51:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T20:54:45Z",
+          "conclusion": "success",
+          "name": "Run npm run test:e2e",
+          "number": 10,
+          "startedAt": "2026-11-12T20:51:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T20:54:46Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@v4",
+          "number": 11,
+          "startedAt": "2026-11-12T20:54:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T20:54:49Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v4",
+          "number": 21,
+          "startedAt": "2026-11-12T20:54:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T20:54:50Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 22,
+          "startedAt": "2026-11-12T20:54:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-12T20:54:50Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-12T20:54:50Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Implantac/box/actions/runs/43304260129/job/131483230581"
+    }
+  ],
+  "status": "completed",
+  "updatedAt": "2026-11-12T20:54:53Z",
+  "url": "https://github.com/Implantac/box/actions/runs/43304260129",
+  "browserTests": {
+    "startTime": "2026-11-12T20:52:00.559Z",
+    "duration": 164709.59399999998,
+    "expected": 122,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "artifactReport": "playwright-github-actions.json",
+  "unitTestsPassed": 347
+}

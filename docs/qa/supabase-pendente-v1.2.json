@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-12T20:58:57.722464+00:00",
+  "status": "deferred_by_user",
+  "decision": "Deixar o Supabase pendente",
+  "dedicatedBoxProjectVisible": false,
+  "projectCreated": false,
+  "sqlExecutedRemotely": false,
+  "migrationsAppliedRemotely": [],
+  "applicationMode": "portfolio",
+  "databaseConnection": "not-used",
+  "otherProjectsPreserved": [
+    "AGROTECH",
+    "VELT"
+  ],
+  "migrationFilesVersionedOnly": {
+    "supabase/migrations/202611120001_box_core.sql": "0a9b58f1b02e6fad4da7be2621563eef3a9595e7ffd3adb262e4cd5dcae1ce19",
+    "supabase/migrations/202611120002_validation_and_public_content.sql": "f61c4e62a6518849dd412f207ac7d36be7fc55f458c63d1f9fe31cdf3bc0cb89",
+    "supabase/migrations/202611120003_inventory_team_commissions.sql": "1f8051f2bd71c6e307ee418e6eba5f765e8c3a7c96f2f53d43bfb6c680b02549",
+    "supabase/migrations/202611120004_fiscal_readiness.sql": "f77d1a523623aa4b752955fbcbbe827fcc2cbbdd25bbff6882dd634c06cc3f87"
+  }
+}

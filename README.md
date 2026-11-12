@@ -5,11 +5,13 @@
 
 Site institucional + landing page + portal do cliente + workspace operacional + estoque + equipe/serviços + comissões opcionais + central de conteúdo. Identidade proposta em grafite, preto e dourado, com o emblema conceitual escolhido na conversa.
 
-> **Evolução local 1.2.0 — preparação para operação real:** módulo de NF-e/NFS-e por OS, cadastros/snapshots/classificações, simulações explícitas e checklist operacional. **Não publicada nesta etapa.** O site público continua na 1.1.1 e o GitHub na 1.0. O provedor não foi escolhido: conector, processamento/artefatos reais e homologação ainda são bloqueios. Veja [Ativação real](docs/ATIVACAO-REAL.md), [Contrato fiscal](docs/FISCAL-CONTRATO.md) e [Validação 1.2](docs/VALIDACAO-1.2.md).
+> **Versão atual 1.2.0 — GitHub e Vercel atualizados em 12/11/2026:** https://box-portfolio-orpin.vercel.app. Fonte de execução no commit [`20c7dda`](https://github.com/Implantac/box/commit/20c7dda337e0071ec2fd0ac0b71f33fe13894437), proveniente do ZIP 1.2 validado. **347 testes + 122 E2E no GitHub Actions; 122 E2E no site público.** Publicação em modo **portfólio**, emissão fiscal desativada e operação real não liberada. **Supabase adiado por escolha do usuário**: nenhum banco criado ou alterado, nenhuma migração aplicada remotamente. Veja o [registro da publicação 1.2](docs/PUBLICACAO-1.2.md).
 
-> **Versão 1.1.1 publicada e validada:** https://box-portfolio-orpin.vercel.app. Logo inteira e em destaque, mensagem abaixo da apresentação e distribuição responsiva da página inicial. **273 testes locais, 96 E2E locais, 96 E2E públicos e oito tamanhos de layout passaram.** Confira [Ajuste visual 1.1.1](docs/AJUSTE-VISUAL-1.1.1.md). O GitHub continua na 1.0; esta publicação veio do ZIP validado.
+> **Preparação fiscal 1.2:** NF-e/NFS-e por OS, cadastros/snapshots/classificações, simulações explícitas e checklist operacional. O provedor não foi escolhido: conector, processamento/artefatos reais e homologação continuam bloqueios. Veja [Ativação real](docs/ATIVACAO-REAL.md), [Contrato fiscal](docs/FISCAL-CONTRATO.md) e [Validação local 1.2](docs/VALIDACAO-1.2.md). Os relatórios locais e os ZIPs preservam a fotografia anterior à publicação; não são o registro atual dos serviços remotos.
 
-> **Histórico da versão 1.1.0, publicada com autorização em 12/11/2026:** https://box-portfolio-orpin.vercel.app. Publicação manual a partir do ZIP validado, com **92/92 testes remotos**. **O GitHub continua na versão 1.0**; esta publicação não veio de um novo commit. Consulte [Validação](docs/VALIDACAO.md) e o [registro da publicação](docs/qa/publicacao-v1.1.json). O ZIP entregue permanece intacto e contém a documentação do momento pré-publicação.
+> **Histórico da versão 1.1.1:** logo inteira e em destaque, mensagem abaixo da apresentação e distribuição responsiva da página inicial. **273 testes locais, 96 E2E locais, 96 E2E públicos e oito tamanhos de layout passaram naquela publicação.** Confira [Ajuste visual 1.1.1](docs/AJUSTE-VISUAL-1.1.1.md). A publicação veio do ZIP validado; naquele momento o GitHub ainda estava na 1.0.
+
+> **Histórico da versão 1.1.0, publicada com autorização em 12/11/2026:** publicação manual a partir do ZIP validado, com **92/92 testes remotos**. Naquele momento o GitHub ainda estava na versão 1.0; a publicação não veio de um novo commit. Consulte [Validação](docs/VALIDACAO.md) e o [registro da publicação](docs/qa/publicacao-v1.1.json). Os ZIPs entregues permanecem intactos, com a documentação do momento de cada entrega.
 
 ## Comece pela experiência
 
@@ -100,6 +102,7 @@ Cadastrar um mecânico **não cria conta Auth**, convite ou vínculo empregatíc
 
 ## Documentação e verificação
 
+- [Publicação 1.2: GitHub/Vercel atualizados e Supabase adiado](docs/PUBLICACAO-1.2.md)
 - [Preparação para operação real](docs/ATIVACAO-REAL.md)
 - [Contrato fiscal e limites](docs/FISCAL-CONTRATO.md)
 - [Matriz de homologação ainda não preenchida](docs/HOMOLOGACAO-REAL-MODELO.md)
@@ -129,12 +132,16 @@ Os testes de banco usam PGlite e identidades fictícias; os HTTP substituem a id
 
 Nenhum plano pago foi contratado, banco alheio reaproveitado, dado real migrado ou conta social conectada. Infraestrutura, domínio, banco/Auth/SMTP, backups e manutenção podem gerar custos no destino; confirmar a oferta atual e obter autorização antes de contratar.
 
-**Publicação atual, versão 1.1.1:** https://box-portfolio-orpin.vercel.app — mesmo projeto dedicado `box-portfolio`, plano Hobby, deployment `dpl_F2C2uUAyeViorNM44AfjpFHTViJJ`, **READY/PROMOTED**, Node.js 22.x. Envio manual do ZIP 1.1.1 validado; 93 hashes conferidos. **96/96 testes remotos**, oito tamanhos sem obstrução/corte da logo e 26 rotas com 200. Nenhuma mudança nas regras de negócio. Registro em [publicação 1.1.1](docs/qa/publicacao-v1.1.1.json).
+**Publicação atual, versão 1.2.0:** https://box-portfolio-orpin.vercel.app — mesmo projeto dedicado `box-portfolio`, plano Hobby preservado, deployment `dpl_988RpaNgPKMfggoCttBBHRm22FYj`, **READY/PROMOTED**, Node.js **22.x efetivo**. Publicação pelo GitHub, fixada no commit `20c7dda337e0071ec2fd0ac0b71f33fe13894437`, cujo fonte corresponde ao ZIP 1.2 validado (240 arquivos do projeto e 135 hashes verificados). **122/122 E2E públicos**, oito tamanhos de home, 16 combinações das páginas fiscal/ativação e 28 rotas com 200 passaram. HTTPS, noindex e logo foram conferidos. Veja [Publicação 1.2](docs/PUBLICACAO-1.2.md) e o [recibo técnico](docs/qa/publicacao-v1.2.json).
 
-**Histórico da publicação 1.1.0:** https://box-portfolio-orpin.vercel.app — projeto dedicado **`box-portfolio`**, Hobby atual, deployment `dpl_FJeBwpr2YfyojHSV53HdXexGV7k4`, **READY/PROMOTED**, Node.js 22.x. HTTPS, noindex, 26 rotas com 200 e **92/92 testes remotos** foram verificados em 12/11/2026. O fonte foi extraído do ZIP 1.1 entregue, sem alterar seus 83 arquivos validados. O repositório `Implantac/box/main` permanece no commit 1.0 `f261c49b4c302f9894dce1f1b04cc2966890f746`; os registros anteriores de 64 testes foram preservados como histórico.
+**Supabase:** o usuário escolheu deixar pendente. As quatro migrações estão versionadas, mas nenhuma foi aplicada remotamente. Nenhum projeto Box foi criado; AGROTECH e VELT não foram reutilizados. A demonstração não utiliza banco externo. Operação real e emissão fiscal continuam bloqueadas.
 
-**Preserve `box-oficina-portfolio`: ele está ligado ao AGROTECH e não é o destino do Box.** A criação do novo `box-portfolio` foi autorizada separadamente. AGROTECH e seus vínculos não foram alterados. Alguns aliases técnicos continuam protegidos por autenticação; não há necessidade de remover essa proteção para acessar o domínio principal público.
+**Histórico da publicação 1.1.1:** mesmo projeto dedicado `box-portfolio`, deployment `dpl_F2C2uUAyeViorNM44AfjpFHTViJJ`, **READY/PROMOTED** naquela publicação, Node.js 22.x. Envio manual do ZIP 1.1.1 validado; 93 hashes conferidos. **96/96 testes remotos**, oito tamanhos sem obstrução/corte da logo e 26 rotas com 200 passaram. Registro preservado em [publicação 1.1.1](docs/qa/publicacao-v1.1.1.json).
 
-O deploy automático Git continua desabilitado. **Sincronizar o repositório com a versão escolhida para publicação ainda é uma pendência**: redeployar o `main` antigo pode voltar o site para a 1.0. Um próximo envio deve conferir fonte/commit/destino/HTTPS/fluxos. A prévia integrada da Arena é temporária e separada da publicação Vercel. A sessão temporária do Vercel CLI foi encerrada depois do envio.
+**Histórico da publicação 1.1.0:** projeto dedicado `box-portfolio`, deployment `dpl_FJeBwpr2YfyojHSV53HdXexGV7k4`, **READY/PROMOTED** naquela publicação, Node.js 22.x. HTTPS, noindex, 26 rotas com 200 e **92/92 testes remotos** foram verificados em 12/11/2026. O fonte foi extraído do ZIP 1.1 entregue, sem alterar seus 83 arquivos validados. Naquele momento, `Implantac/box/main` ainda estava no commit 1.0 `f261c49b4c302f9894dce1f1b04cc2966890f746`; os registros anteriores de 64 testes permanecem como histórico.
+
+**Preserve `box-oficina-portfolio`: ele está ligado ao AGROTECH e não é o destino do Box.** A criação do `box-portfolio` foi autorizada separadamente. AGROTECH e seus vínculos não foram alterados. Alguns aliases técnicos continuam protegidos por autenticação; nenhuma proteção foi removida para acessar o domínio principal público.
+
+O deploy automático Git continua desabilitado, por preservação da configuração existente. O `main` foi atualizado para a fonte 1.2; o registro posterior de publicação altera somente documentação/evidências, sem mudar o código publicado. Um próximo envio ainda deve conferir fonte/commit/destino/HTTPS/fluxos. A prévia integrada da Arena é temporária e separada da publicação Vercel. Esta atualização usou o conector Vercel, sem reabrir uma sessão Vercel CLI. Os ZIPs e guias já entregues não foram reescritos.
 
 O plano documental com 46 itens continua sendo planejamento: **não há declaração de todos os 46 concluídos**, auditoria completa ou sistema comercial homologado.

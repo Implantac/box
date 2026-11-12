@@ -1,0 +1,3700 @@
+{
+  "config": {
+    "argv": [
+      "/home/user/.cache/box-node-runtime/node_modules/node/bin/node",
+      "/home/user/.cache/box-public-qa-v1.2-20261112/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.release.config.ts"
+    ],
+    "configFile": "/home/user/.cache/box-public-qa-v1.2-20261112/playwright.release.config.ts",
+    "rootDir": "/home/user/.cache/box-public-qa-v1.2-20261112/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/user/.cache/box-public-qa-v1.2-20261112/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop-chromium-deploy-v1.2",
+        "name": "desktop-chromium-deploy-v1.2",
+        "testDir": "/home/user/.cache/box-public-qa-v1.2-20261112/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/home/user/.cache/box-public-qa-v1.2-20261112/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile-chromium-deploy-v1.2",
+        "name": "mobile-chromium-deploy-v1.2",
+        "testDir": "/home/user/.cache/box-public-qa-v1.2-20261112/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/user/.cache/box-public-qa-v1.2-20261112/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop-chromium-deploy-v1.2",
+        "testDir": "/home/user/.cache/box-public-qa-v1.2-20261112/tests/e2e",
+        "snapshotDir": "/home/user/.cache/box-public-qa-v1.2-20261112/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "https://box-portfolio-orpin.vercel.app",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.8127.18 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop-chromium-deploy-v1.2"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/home/user/.cache/box-public-qa-v1.2-20261112/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "mobile-chromium-deploy-v1.2",
+        "testDir": "/home/user/.cache/box-public-qa-v1.2-20261112/tests/e2e",
+        "snapshotDir": "/home/user/.cache/box-public-qa-v1.2-20261112/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "https://box-portfolio-orpin.vercel.app",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.8127.18 Mobile Safari/537.36",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "screen": {
+            "width": 412,
+            "height": 915
+          },
+          "deviceScaleFactor": 2.625,
+          "isMobile": true,
+          "hasTouch": true,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile-chromium-deploy-v1.2"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/qa/playwright-deploy-v1.2.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fiscal.spec.ts",
+      "file": "fiscal.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "fiscal e checklist distinguem demonstração, preparo e emissão real bloqueada",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1169,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:54:48.080Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1162,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:39.068Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82bfb14f47a7c0077b7e-cc80a390124f06e64413",
+          "file": "fiscal.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "NF-e e NFS-e da mesma OS separam totais sem duplicar financeiro ou estoque",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1532,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:54:49.356Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1994,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:40.426Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82bfb14f47a7c0077b7e-1e01273991790e2283e7",
+          "file": "fiscal.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "timeout exige consulta; autorização e cancelamento são apenas simulados e preservados",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2071,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:54:50.901Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2225,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:42.429Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82bfb14f47a7c0077b7e-af4cfe8a0aae839a0e41",
+          "file": "fiscal.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "rejeição simulada admite revisão de classificações sem reescrever valores",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2247,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:54:52.982Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2160,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:44.672Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82bfb14f47a7c0077b7e-27abf7120fdef59460bb",
+          "file": "fiscal.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "descarte motivado mantém snapshot e libera outro preparo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1698,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:54:55.243Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1888,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:46.846Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82bfb14f47a7c0077b7e-8f408b3cec9781bce6f6",
+          "file": "fiscal.spec.ts",
+          "line": 23,
+          "column": 1
+        },
+        {
+          "title": "cadastro do emitente é parcial e não reescreve o snapshot anterior",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2068,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:54:56.951Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2190,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:48.747Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82bfb14f47a7c0077b7e-d5c6138a2e0160054550",
+          "file": "fiscal.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "destinatários diferentes recebem identificadores próprios e preservam cadastros",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1154,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:54:59.033Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1199,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:50.958Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82bfb14f47a7c0077b7e-ad344aa188a51b31afc1",
+          "file": "fiscal.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "recepção não vê módulo fiscal nem consegue ação pela tela",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 739,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:00.203Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1020,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:52.170Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82bfb14f47a7c0077b7e-c08c928be29426d482d6",
+          "file": "fiscal.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "financeiro acessa fiscal mas não o checklist administrativo nem altera emitente",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1145,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:00.950Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1549,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:53.207Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82bfb14f47a7c0077b7e-c9268982e8b8b9a4e988",
+          "file": "fiscal.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "fiscal por OS e busca integrada encontram o snapshot sem expor tributos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2067,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:02.105Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2895,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:54.771Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82bfb14f47a7c0077b7e-935a30e200e8cf38a9f1",
+          "file": "fiscal.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "espelho baixado é claramente não fiscal e modal passa verificação automática",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1888,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:04.184Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1901,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:57.684Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82bfb14f47a7c0077b7e-61946c2c6d6e77cd6a14",
+          "file": "fiscal.spec.ts",
+          "line": 35,
+          "column": 1
+        },
+        {
+          "title": "páginas novas sem overflow e checklist sem atestado fictício de produção",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2584,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:06.084Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2303,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:59.607Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82bfb14f47a7c0077b7e-3d64a05ad6f19858365d",
+          "file": "fiscal.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "sessão v2 continua sem criar notas retroativas nem apagar financeiro",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1076,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:08.681Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1092,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:01.920Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "82bfb14f47a7c0077b7e-774ba0069e519ed880a5",
+          "file": "fiscal.spec.ts",
+          "line": 39,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "home-layout.spec.ts",
+      "file": "home-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "logo inteira e página sem colisões em oito tamanhos de tela",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2191,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:09.781Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "home-layout-measurements",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJ2aWV3cG9ydCI6IHsKICAgICAgIndpZHRoIjogMTY1NCwKICAgICAgImhlaWdodCI6IDkwMAogICAgfSwKICAgICJpbWFnZSI6IHsKICAgICAgIngiOiA4NzksCiAgICAgICJ5IjogMjAxLjI5Njg3NSwKICAgICAgInJpZ2h0IjogMTQzOSwKICAgICAgImJvdHRvbSI6IDc2MS4yOTY4NzUsCiAgICAgICJ3aWR0aCI6IDU2MCwKICAgICAgImhlaWdodCI6IDU2MAogICAgfSwKICAgICJvYnN0cnVjdGlvbnMiOiBbXSwKICAgICJmdWxsSW1hZ2VJbkZpZ3VyZSI6IHRydWUsCiAgICAibm9Ib3Jpem9udGFsT3ZlcmZsb3ciOiB0cnVlLAogICAgImxvZ29JbnNpZGVQYWdlIjogdHJ1ZSwKICAgICJub1NlY3Rpb25Db2xsaXNpb25zIjogdHJ1ZSwKICAgICJvYnNvbGV0ZU92ZXJsYXlSZW1vdmVkIjogdHJ1ZSwKICAgICJjYXB0aW9uQWZ0ZXJJbWFnZSI6IHRydWUsCiAgICAiY29ubmVjdGlvbkFmdGVyRmlndXJlIjogdHJ1ZSwKICAgICJsYXlvdXRNb2RlIjogInJlbGF0aXZlIgogIH0sCiAgewogICAgInZpZXdwb3J0IjogewogICAgICAid2lkdGgiOiAxNDQwLAogICAgICAiaGVpZ2h0IjogOTAwCiAgICB9LAogICAgImltYWdlIjogewogICAgICAieCI6IDc3MiwKICAgICAgInkiOiAxOTMuMjk2ODc1LAogICAgICAicmlnaHQiOiAxMzMyLAogICAgICAiYm90dG9tIjogNzUzLjI5Njg3NSwKICAgICAgIndpZHRoIjogNTYwLAogICAgICAiaGVpZ2h0IjogNTYwCiAgICB9LAogICAgIm9ic3RydWN0aW9ucyI6IFtdLAogICAgImZ1bGxJbWFnZUluRmlndXJlIjogdHJ1ZSwKICAgICJub0hvcml6b250YWxPdmVyZmxvdyI6IHRydWUsCiAgICAibG9nb0luc2lkZVBhZ2UiOiB0cnVlLAogICAgIm5vU2VjdGlvbkNvbGxpc2lvbnMiOiB0cnVlLAogICAgIm9ic29sZXRlT3ZlcmxheVJlbW92ZWQiOiB0cnVlLAogICAgImNhcHRpb25BZnRlckltYWdlIjogdHJ1ZSwKICAgICJjb25uZWN0aW9uQWZ0ZXJGaWd1cmUiOiB0cnVlLAogICAgImxheW91dE1vZGUiOiAicmVsYXRpdmUiCiAgfSwKICB7CiAgICAidmlld3BvcnQiOiB7CiAgICAgICJ3aWR0aCI6IDEzNjYsCiAgICAgICJoZWlnaHQiOiA3NjgKICAgIH0sCiAgICAiaW1hZ2UiOiB7CiAgICAgICJ4IjogNzM1LAogICAgICAieSI6IDE5My4yOTY4NzUsCiAgICAgICJyaWdodCI6IDEyOTUsCiAgICAgICJib3R0b20iOiA3NTMuMjk2ODc1LAogICAgICAid2lkdGgiOiA1NjAsCiAgICAgICJoZWlnaHQiOiA1NjAKICAgIH0sCiAgICAib2JzdHJ1Y3Rpb25zIjogW10sCiAgICAiZnVsbEltYWdlSW5GaWd1cmUiOiB0cnVlLAogICAgIm5vSG9yaXpvbnRhbE92ZXJmbG93IjogdHJ1ZSwKICAgICJsb2dvSW5zaWRlUGFnZSI6IHRydWUsCiAgICAibm9TZWN0aW9uQ29sbGlzaW9ucyI6IHRydWUsCiAgICAib2Jzb2xldGVPdmVybGF5UmVtb3ZlZCI6IHRydWUsCiAgICAiY2FwdGlvbkFmdGVySW1hZ2UiOiB0cnVlLAogICAgImNvbm5lY3Rpb25BZnRlckZpZ3VyZSI6IHRydWUsCiAgICAibGF5b3V0TW9kZSI6ICJyZWxhdGl2ZSIKICB9LAogIHsKICAgICJ2aWV3cG9ydCI6IHsKICAgICAgIndpZHRoIjogMTAyNCwKICAgICAgImhlaWdodCI6IDc2OAogICAgfSwKICAgICJpbWFnZSI6IHsKICAgICAgIngiOiA1MTkuOTA2MjUsCiAgICAgICJ5IjogMTg3LjU5Mzc1LAogICAgICAicmlnaHQiOiA5ODMuMDQ2ODc1LAogICAgICAiYm90dG9tIjogNjUwLjczNDM3NSwKICAgICAgIndpZHRoIjogNDYzLjE0MDYyNSwKICAgICAgImhlaWdodCI6IDQ2My4xNDA2MjUKICAgIH0sCiAgICAib2JzdHJ1Y3Rpb25zIjogW10sCiAgICAiZnVsbEltYWdlSW5GaWd1cmUiOiB0cnVlLAogICAgIm5vSG9yaXpvbnRhbE92ZXJmbG93IjogdHJ1ZSwKICAgICJsb2dvSW5zaWRlUGFnZSI6IHRydWUsCiAgICAibm9TZWN0aW9uQ29sbGlzaW9ucyI6IHRydWUsCiAgICAib2Jzb2xldGVPdmVybGF5UmVtb3ZlZCI6IHRydWUsCiAgICAiY2FwdGlvbkFmdGVySW1hZ2UiOiB0cnVlLAogICAgImNvbm5lY3Rpb25BZnRlckZpZ3VyZSI6IHRydWUsCiAgICAibGF5b3V0TW9kZSI6ICJyZWxhdGl2ZSIKICB9LAogIHsKICAgICJ2aWV3cG9ydCI6IHsKICAgICAgIndpZHRoIjogNzY4LAogICAgICAiaGVpZ2h0IjogMTAyNAogICAgfSwKICAgICJpbWFnZSI6IHsKICAgICAgIngiOiAxMzQsCiAgICAgICJ5IjogMTc1LjU5Mzc1LAogICAgICAicmlnaHQiOiA2MzQsCiAgICAgICJib3R0b20iOiA2NzUuNTkzNzUsCiAgICAgICJ3aWR0aCI6IDUwMCwKICAgICAgImhlaWdodCI6IDUwMAogICAgfSwKICAgICJvYnN0cnVjdGlvbnMiOiBbXSwKICAgICJmdWxsSW1hZ2VJbkZpZ3VyZSI6IHRydWUsCiAgICAibm9Ib3Jpem9udGFsT3ZlcmZsb3ciOiB0cnVlLAogICAgImxvZ29JbnNpZGVQYWdlIjogdHJ1ZSwKICAgICJub1NlY3Rpb25Db2xsaXNpb25zIjogdHJ1ZSwKICAgICJvYnNvbGV0ZU92ZXJsYXlSZW1vdmVkIjogdHJ1ZSwKICAgICJjYXB0aW9uQWZ0ZXJJbWFnZSI6IHRydWUsCiAgICAiY29ubmVjdGlvbkFmdGVyRmlndXJlIjogdHJ1ZSwKICAgICJsYXlvdXRNb2RlIjogInJlbGF0aXZlIgogIH0sCiAgewogICAgInZpZXdwb3J0IjogewogICAgICAid2lkdGgiOiAzOTAsCiAgICAgICJoZWlnaHQiOiA4NDQKICAgIH0sCiAgICAiaW1hZ2UiOiB7CiAgICAgICJ4IjogMjQsCiAgICAgICJ5IjogMTY1LjU5Mzc1LAogICAgICAicmlnaHQiOiAzNjYsCiAgICAgICJib3R0b20iOiA1MDcuNTkzNzUsCiAgICAgICJ3aWR0aCI6IDM0MiwKICAgICAgImhlaWdodCI6IDM0MgogICAgfSwKICAgICJvYnN0cnVjdGlvbnMiOiBbXSwKICAgICJmdWxsSW1hZ2VJbkZpZ3VyZSI6IHRydWUsCiAgICAibm9Ib3Jpem9udGFsT3ZlcmZsb3ciOiB0cnVlLAogICAgImxvZ29JbnNpZGVQYWdlIjogdHJ1ZSwKICAgICJub1NlY3Rpb25Db2xsaXNpb25zIjogdHJ1ZSwKICAgICJvYnNvbGV0ZU92ZXJsYXlSZW1vdmVkIjogdHJ1ZSwKICAgICJjYXB0aW9uQWZ0ZXJJbWFnZSI6IHRydWUsCiAgICAiY29ubmVjdGlvbkFmdGVyRmlndXJlIjogdHJ1ZSwKICAgICJsYXlvdXRNb2RlIjogInJlbGF0aXZlIgogIH0sCiAgewogICAgInZpZXdwb3J0IjogewogICAgICAid2lkdGgiOiAzNjAsCiAgICAgICJoZWlnaHQiOiA4MDAKICAgIH0sCiAgICAiaW1hZ2UiOiB7CiAgICAgICJ4IjogMjAsCiAgICAgICJ5IjogMTY1LjU5Mzc1LAogICAgICAicmlnaHQiOiAzNDAsCiAgICAgICJib3R0b20iOiA0ODUuNTkzNzUsCiAgICAgICJ3aWR0aCI6IDMyMCwKICAgICAgImhlaWdodCI6IDMyMAogICAgfSwKICAgICJvYnN0cnVjdGlvbnMiOiBbXSwKICAgICJmdWxsSW1hZ2VJbkZpZ3VyZSI6IHRydWUsCiAgICAibm9Ib3Jpem9udGFsT3ZlcmZsb3ciOiB0cnVlLAogICAgImxvZ29JbnNpZGVQYWdlIjogdHJ1ZSwKICAgICJub1NlY3Rpb25Db2xsaXNpb25zIjogdHJ1ZSwKICAgICJvYnNvbGV0ZU92ZXJsYXlSZW1vdmVkIjogdHJ1ZSwKICAgICJjYXB0aW9uQWZ0ZXJJbWFnZSI6IHRydWUsCiAgICAiY29ubmVjdGlvbkFmdGVyRmlndXJlIjogdHJ1ZSwKICAgICJsYXlvdXRNb2RlIjogInJlbGF0aXZlIgogIH0sCiAgewogICAgInZpZXdwb3J0IjogewogICAgICAid2lkdGgiOiAzMjAsCiAgICAgICJoZWlnaHQiOiA3NDAKICAgIH0sCiAgICAiaW1hZ2UiOiB7CiAgICAgICJ4IjogMjAsCiAgICAgICJ5IjogMTY1LjU5Mzc1LAogICAgICAicmlnaHQiOiAzMDAsCiAgICAgICJib3R0b20iOiA0NDUuNTkzNzUsCiAgICAgICJ3aWR0aCI6IDI4MCwKICAgICAgImhlaWdodCI6IDI4MAogICAgfSwKICAgICJvYnN0cnVjdGlvbnMiOiBbXSwKICAgICJmdWxsSW1hZ2VJbkZpZ3VyZSI6IHRydWUsCiAgICAibm9Ib3Jpem9udGFsT3ZlcmZsb3ciOiB0cnVlLAogICAgImxvZ29JbnNpZGVQYWdlIjogdHJ1ZSwKICAgICJub1NlY3Rpb25Db2xsaXNpb25zIjogdHJ1ZSwKICAgICJvYnNvbGV0ZU92ZXJsYXlSZW1vdmVkIjogdHJ1ZSwKICAgICJjYXB0aW9uQWZ0ZXJJbWFnZSI6IHRydWUsCiAgICAiY29ubmVjdGlvbkFmdGVyRmlndXJlIjogdHJ1ZSwKICAgICJsYXlvdXRNb2RlIjogInJlbGF0aXZlIgogIH0KXQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2342,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:03.028Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "home-layout-measurements",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJ2aWV3cG9ydCI6IHsKICAgICAgIndpZHRoIjogMTY1NCwKICAgICAgImhlaWdodCI6IDkwMAogICAgfSwKICAgICJpbWFnZSI6IHsKICAgICAgIngiOiA4NzksCiAgICAgICJ5IjogMjAxLjI5Njg3NSwKICAgICAgInJpZ2h0IjogMTQzOSwKICAgICAgImJvdHRvbSI6IDc2MS4yOTY4NzUsCiAgICAgICJ3aWR0aCI6IDU2MCwKICAgICAgImhlaWdodCI6IDU2MAogICAgfSwKICAgICJvYnN0cnVjdGlvbnMiOiBbXSwKICAgICJmdWxsSW1hZ2VJbkZpZ3VyZSI6IHRydWUsCiAgICAibm9Ib3Jpem9udGFsT3ZlcmZsb3ciOiB0cnVlLAogICAgImxvZ29JbnNpZGVQYWdlIjogdHJ1ZSwKICAgICJub1NlY3Rpb25Db2xsaXNpb25zIjogdHJ1ZSwKICAgICJvYnNvbGV0ZU92ZXJsYXlSZW1vdmVkIjogdHJ1ZSwKICAgICJjYXB0aW9uQWZ0ZXJJbWFnZSI6IHRydWUsCiAgICAiY29ubmVjdGlvbkFmdGVyRmlndXJlIjogdHJ1ZSwKICAgICJsYXlvdXRNb2RlIjogInJlbGF0aXZlIgogIH0sCiAgewogICAgInZpZXdwb3J0IjogewogICAgICAid2lkdGgiOiAxNDQwLAogICAgICAiaGVpZ2h0IjogOTAwCiAgICB9LAogICAgImltYWdlIjogewogICAgICAieCI6IDc3MiwKICAgICAgInkiOiAxOTMuMjk2ODc1LAogICAgICAicmlnaHQiOiAxMzMyLAogICAgICAiYm90dG9tIjogNzUzLjI5Njg3NSwKICAgICAgIndpZHRoIjogNTYwLAogICAgICAiaGVpZ2h0IjogNTYwCiAgICB9LAogICAgIm9ic3RydWN0aW9ucyI6IFtdLAogICAgImZ1bGxJbWFnZUluRmlndXJlIjogdHJ1ZSwKICAgICJub0hvcml6b250YWxPdmVyZmxvdyI6IHRydWUsCiAgICAibG9nb0luc2lkZVBhZ2UiOiB0cnVlLAogICAgIm5vU2VjdGlvbkNvbGxpc2lvbnMiOiB0cnVlLAogICAgIm9ic29sZXRlT3ZlcmxheVJlbW92ZWQiOiB0cnVlLAogICAgImNhcHRpb25BZnRlckltYWdlIjogdHJ1ZSwKICAgICJjb25uZWN0aW9uQWZ0ZXJGaWd1cmUiOiB0cnVlLAogICAgImxheW91dE1vZGUiOiAicmVsYXRpdmUiCiAgfSwKICB7CiAgICAidmlld3BvcnQiOiB7CiAgICAgICJ3aWR0aCI6IDEzNjYsCiAgICAgICJoZWlnaHQiOiA3NjgKICAgIH0sCiAgICAiaW1hZ2UiOiB7CiAgICAgICJ4IjogNzM1LAogICAgICAieSI6IDE5My4yOTY4NzUsCiAgICAgICJyaWdodCI6IDEyOTUsCiAgICAgICJib3R0b20iOiA3NTMuMjk2ODc1LAogICAgICAid2lkdGgiOiA1NjAsCiAgICAgICJoZWlnaHQiOiA1NjAKICAgIH0sCiAgICAib2JzdHJ1Y3Rpb25zIjogW10sCiAgICAiZnVsbEltYWdlSW5GaWd1cmUiOiB0cnVlLAogICAgIm5vSG9yaXpvbnRhbE92ZXJmbG93IjogdHJ1ZSwKICAgICJsb2dvSW5zaWRlUGFnZSI6IHRydWUsCiAgICAibm9TZWN0aW9uQ29sbGlzaW9ucyI6IHRydWUsCiAgICAib2Jzb2xldGVPdmVybGF5UmVtb3ZlZCI6IHRydWUsCiAgICAiY2FwdGlvbkFmdGVySW1hZ2UiOiB0cnVlLAogICAgImNvbm5lY3Rpb25BZnRlckZpZ3VyZSI6IHRydWUsCiAgICAibGF5b3V0TW9kZSI6ICJyZWxhdGl2ZSIKICB9LAogIHsKICAgICJ2aWV3cG9ydCI6IHsKICAgICAgIndpZHRoIjogMTAyNCwKICAgICAgImhlaWdodCI6IDc2OAogICAgfSwKICAgICJpbWFnZSI6IHsKICAgICAgIngiOiA1MTkuOTA2MjUsCiAgICAgICJ5IjogMTg3LjU5Mzc1LAogICAgICAicmlnaHQiOiA5ODMuMDQ2ODc1LAogICAgICAiYm90dG9tIjogNjUwLjczNDM3NSwKICAgICAgIndpZHRoIjogNDYzLjE0MDYyNSwKICAgICAgImhlaWdodCI6IDQ2My4xNDA2MjUKICAgIH0sCiAgICAib2JzdHJ1Y3Rpb25zIjogW10sCiAgICAiZnVsbEltYWdlSW5GaWd1cmUiOiB0cnVlLAogICAgIm5vSG9yaXpvbnRhbE92ZXJmbG93IjogdHJ1ZSwKICAgICJsb2dvSW5zaWRlUGFnZSI6IHRydWUsCiAgICAibm9TZWN0aW9uQ29sbGlzaW9ucyI6IHRydWUsCiAgICAib2Jzb2xldGVPdmVybGF5UmVtb3ZlZCI6IHRydWUsCiAgICAiY2FwdGlvbkFmdGVySW1hZ2UiOiB0cnVlLAogICAgImNvbm5lY3Rpb25BZnRlckZpZ3VyZSI6IHRydWUsCiAgICAibGF5b3V0TW9kZSI6ICJyZWxhdGl2ZSIKICB9LAogIHsKICAgICJ2aWV3cG9ydCI6IHsKICAgICAgIndpZHRoIjogNzY4LAogICAgICAiaGVpZ2h0IjogMTAyNAogICAgfSwKICAgICJpbWFnZSI6IHsKICAgICAgIngiOiAxMzQsCiAgICAgICJ5IjogMTc1LjU5Mzc1LAogICAgICAicmlnaHQiOiA2MzQsCiAgICAgICJib3R0b20iOiA2NzUuNTkzNzUsCiAgICAgICJ3aWR0aCI6IDUwMCwKICAgICAgImhlaWdodCI6IDUwMAogICAgfSwKICAgICJvYnN0cnVjdGlvbnMiOiBbXSwKICAgICJmdWxsSW1hZ2VJbkZpZ3VyZSI6IHRydWUsCiAgICAibm9Ib3Jpem9udGFsT3ZlcmZsb3ciOiB0cnVlLAogICAgImxvZ29JbnNpZGVQYWdlIjogdHJ1ZSwKICAgICJub1NlY3Rpb25Db2xsaXNpb25zIjogdHJ1ZSwKICAgICJvYnNvbGV0ZU92ZXJsYXlSZW1vdmVkIjogdHJ1ZSwKICAgICJjYXB0aW9uQWZ0ZXJJbWFnZSI6IHRydWUsCiAgICAiY29ubmVjdGlvbkFmdGVyRmlndXJlIjogdHJ1ZSwKICAgICJsYXlvdXRNb2RlIjogInJlbGF0aXZlIgogIH0sCiAgewogICAgInZpZXdwb3J0IjogewogICAgICAid2lkdGgiOiAzOTAsCiAgICAgICJoZWlnaHQiOiA4NDQKICAgIH0sCiAgICAiaW1hZ2UiOiB7CiAgICAgICJ4IjogMjQsCiAgICAgICJ5IjogMTY1LjU5Mzc1LAogICAgICAicmlnaHQiOiAzNjYsCiAgICAgICJib3R0b20iOiA1MDcuNTkzNzUsCiAgICAgICJ3aWR0aCI6IDM0MiwKICAgICAgImhlaWdodCI6IDM0MgogICAgfSwKICAgICJvYnN0cnVjdGlvbnMiOiBbXSwKICAgICJmdWxsSW1hZ2VJbkZpZ3VyZSI6IHRydWUsCiAgICAibm9Ib3Jpem9udGFsT3ZlcmZsb3ciOiB0cnVlLAogICAgImxvZ29JbnNpZGVQYWdlIjogdHJ1ZSwKICAgICJub1NlY3Rpb25Db2xsaXNpb25zIjogdHJ1ZSwKICAgICJvYnNvbGV0ZU92ZXJsYXlSZW1vdmVkIjogdHJ1ZSwKICAgICJjYXB0aW9uQWZ0ZXJJbWFnZSI6IHRydWUsCiAgICAiY29ubmVjdGlvbkFmdGVyRmlndXJlIjogdHJ1ZSwKICAgICJsYXlvdXRNb2RlIjogInJlbGF0aXZlIgogIH0sCiAgewogICAgInZpZXdwb3J0IjogewogICAgICAid2lkdGgiOiAzNjAsCiAgICAgICJoZWlnaHQiOiA4MDAKICAgIH0sCiAgICAiaW1hZ2UiOiB7CiAgICAgICJ4IjogMjAsCiAgICAgICJ5IjogMTY1LjU5Mzc1LAogICAgICAicmlnaHQiOiAzNDAsCiAgICAgICJib3R0b20iOiA0ODUuNTkzNzUsCiAgICAgICJ3aWR0aCI6IDMyMCwKICAgICAgImhlaWdodCI6IDMyMAogICAgfSwKICAgICJvYnN0cnVjdGlvbnMiOiBbXSwKICAgICJmdWxsSW1hZ2VJbkZpZ3VyZSI6IHRydWUsCiAgICAibm9Ib3Jpem9udGFsT3ZlcmZsb3ciOiB0cnVlLAogICAgImxvZ29JbnNpZGVQYWdlIjogdHJ1ZSwKICAgICJub1NlY3Rpb25Db2xsaXNpb25zIjogdHJ1ZSwKICAgICJvYnNvbGV0ZU92ZXJsYXlSZW1vdmVkIjogdHJ1ZSwKICAgICJjYXB0aW9uQWZ0ZXJJbWFnZSI6IHRydWUsCiAgICAiY29ubmVjdGlvbkFmdGVyRmlndXJlIjogdHJ1ZSwKICAgICJsYXlvdXRNb2RlIjogInJlbGF0aXZlIgogIH0sCiAgewogICAgInZpZXdwb3J0IjogewogICAgICAid2lkdGgiOiAzMjAsCiAgICAgICJoZWlnaHQiOiA3NDAKICAgIH0sCiAgICAiaW1hZ2UiOiB7CiAgICAgICJ4IjogMjAsCiAgICAgICJ5IjogMTY1LjU5Mzc1LAogICAgICAicmlnaHQiOiAzMDAsCiAgICAgICJib3R0b20iOiA0NDUuNTkzNzUsCiAgICAgICJ3aWR0aCI6IDI4MCwKICAgICAgImhlaWdodCI6IDI4MAogICAgfSwKICAgICJvYnN0cnVjdGlvbnMiOiBbXSwKICAgICJmdWxsSW1hZ2VJbkZpZ3VyZSI6IHRydWUsCiAgICAibm9Ib3Jpem9udGFsT3ZlcmZsb3ciOiB0cnVlLAogICAgImxvZ29JbnNpZGVQYWdlIjogdHJ1ZSwKICAgICJub1NlY3Rpb25Db2xsaXNpb25zIjogdHJ1ZSwKICAgICJvYnNvbGV0ZU92ZXJsYXlSZW1vdmVkIjogdHJ1ZSwKICAgICJjYXB0aW9uQWZ0ZXJJbWFnZSI6IHRydWUsCiAgICAiY29ubmVjdGlvbkFmdGVyRmlndXJlIjogdHJ1ZSwKICAgICJsYXlvdXRNb2RlIjogInJlbGF0aXZlIgogIH0KXQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "843dbd5c749186b380e0-0d98f3286bf538aa1854",
+          "file": "home-layout.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "página reorganizada mantém menu, âncoras, FAQ e entrada fictícia no CRM",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3489,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:11.983Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3525,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:05.380Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "843dbd5c749186b380e0-1e9209d6f49b653b609d",
+          "file": "home-layout.spec.ts",
+          "line": 59,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "portfolio.spec.ts",
+      "file": "portfolio.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "rota, responsividade e verificações automáticas: /",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1826,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:15.491Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1873,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:08.925Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-e39ac1a66a219fbeb491",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /cambio-automatico",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1121,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:17.328Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1289,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:10.809Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-f8cb11ad5ce4a6208408",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /bio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1183,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:18.458Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1357,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:12.112Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-e71ed006fc42835d7d4f",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /privacidade",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1237,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:19.651Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1124,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:13.481Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-306dc03caabccce283a8",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /entrar",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1245,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:20.900Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1127,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:14.620Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-39d5d0eba35d75d45261",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /entrar/seguranca",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1254,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:22.155Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1132,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:15.762Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-613b8ec022de038c851b",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /guia",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 954,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:23.422Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1028,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:16.903Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-975464b756e81ef7a5dc",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /painel",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1814,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:24.389Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1625,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:17.945Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-2651637f27bcaaffb655",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /painel/ordens",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1592,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:26.216Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1625,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:19.579Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-d022b285eb4f57fa057b",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /painel/clientes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1500,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:27.818Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1532,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:21.212Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-40576f8cd8658d59962b",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /painel/agenda",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1903,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:29.334Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1477,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:22.756Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-93d4c23d20deaf079516",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /painel/atendimentos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1675,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:31.249Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1451,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:24.246Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-0ce02903c720507586c1",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /painel/orcamentos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1758,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:32.937Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1520,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:25.704Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-f89f5b0c1e70b28f1efd",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /painel/financeiro",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1750,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:34.707Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1452,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:27.238Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-876221de2fef7d6cb2e3",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /painel/conteudo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1843,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:36.468Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1740,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:28.700Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-3ebd6d5de92f6e9ce69b",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /painel/relatorios",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1448,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:38.327Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1391,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:30.453Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-8c48fd142385978512db",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /painel/configuracoes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1359,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:39.788Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1352,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:31.854Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-51d2da9323680b567d0c",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /painel/estoque",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1633,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:41.159Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1608,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:33.218Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-2c086cf30bd0e014c149",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /painel/mecanicos",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1619,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:42.807Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1597,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:34.840Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-17f0770fc084838507d4",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /painel/comissoes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1679,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:44.436Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1630,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:36.448Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-8ffca9715a49075b33ca",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "rota, responsividade e verificações automáticas: /cliente",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1192,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:46.126Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1372,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:38.095Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-968fa7a1b575c68313cb",
+          "file": "portfolio.spec.ts",
+          "line": 9,
+          "column": 26
+        },
+        {
+          "title": "formulário fictício entra no CRM e outra sessão fica isolada",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1679,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:47.331Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1685,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:39.491Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-4c3b4a896150381900cf",
+          "file": "portfolio.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "novo cliente, veículo, OS e orçamento pelo formulário",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2523,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:49.022Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2147,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:41.187Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-22c2d23cd293d2815b0d",
+          "file": "portfolio.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "portal aprova a versão, execução libera e recebimento parcial integra",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2263,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:51.557Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1927,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:43.342Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-e4c9f708f8fb80280076",
+          "file": "portfolio.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "orçamento adicional pausa execução e preserva histórico",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1768,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:53.832Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1661,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:45.283Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-61093be9c4077a60545f",
+          "file": "portfolio.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "bloqueio de etapa e de conflito de agenda são visíveis",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1588,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:55.614Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1489,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:46.954Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-4e8f1c2beaf9b4a046a8",
+          "file": "portfolio.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "simula falha parcial e recuperação por rede sem envio externo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1582,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:57.226Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1387,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:48.456Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-cbb4e1ad76657600ca45",
+          "file": "portfolio.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "conteúdo adaptado por rede exige nova revisão",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1290,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:55:58.818Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1471,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:49.854Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-7d40056b36caa79d37e0",
+          "file": "portfolio.spec.ts",
+          "line": 16,
+          "column": 1
+        },
+        {
+          "title": "perfil demonstrativo limita navegação e restauração de sessão é explícita",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1631,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:00.126Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1408,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:51.333Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-372c561adcc1670aa4be",
+          "file": "portfolio.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "busca, menu móvel e teclado",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1215,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:01.766Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1300,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:52.752Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-fd94c13281bfb78298b4",
+          "file": "portfolio.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "APIs reais falham fechadas no portfólio e saúde não simula banco",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 624,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:02.998Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 571,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:54.065Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-c0107df7744608a31329",
+          "file": "portfolio.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "404, noindex e ausência de rastreadores",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 816,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:03.628Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 845,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:54.644Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "34cb4603fa9a5b79d30c-a6ffd62b42c4e3b3fc32",
+          "file": "portfolio.spec.ts",
+          "line": 20,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "states.spec.ts",
+      "file": "states.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "prévia e exportação respeitam a legenda de cada destino",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2226,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:04.464Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2280,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:55.505Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be092eae759d55e55094-53e6511d20937e7e2e2d",
+          "file": "states.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "conteúdo só para Facebook não abre prévia nem exportação de outra rede",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1780,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:06.702Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1473,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:57.794Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be092eae759d55e55094-6e0d92185b0c5b7d1d31",
+          "file": "states.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "formulário aberto é acessível, mantém foco na janela e volta ao fechar",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1985,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:08.495Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1703,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:57:59.279Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be092eae759d55e55094-21e78f578bb7efa6f249",
+          "file": "states.spec.ts",
+          "line": 42,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "workshop.spec.ts",
+      "file": "workshop.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "peça nova, entrada, ajuste motivado e unidade histórica preservada",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2959,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:10.511Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2311,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:58:01.009Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "65c53a506c6fc773dade-612e8db76d45b80818f1",
+          "file": "workshop.spec.ts",
+          "line": 52,
+          "column": 1
+        },
+        {
+          "title": "OS exige conclusão e resolução de reservas; baixa e devolução mantêm origem",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2289,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:13.482Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2277,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:58:03.331Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "65c53a506c6fc773dade-50277ed0ad0716821c8c",
+          "file": "workshop.spec.ts",
+          "line": 88,
+          "column": 1
+        },
+        {
+          "title": "reserva e alocação ficam bloqueadas sem aprovação da versão da própria OS",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1165,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:15.781Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1158,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:58:05.624Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "65c53a506c6fc773dade-b96aa9b7b7809cd8306f",
+          "file": "workshop.spec.ts",
+          "line": 126,
+          "column": 1
+        },
+        {
+          "title": "alocação fixa, execução, pausa, conclusão, repasse parcial e estorno",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5401,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:16.955Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4375,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:58:06.793Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "65c53a506c6fc773dade-5b453a7a94e302e0efca",
+          "file": "workshop.spec.ts",
+          "line": 139,
+          "column": 1
+        },
+        {
+          "title": "regra opcional aceita fixo, nenhuma e percentual sem recalcular o histórico",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2585,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:22.367Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2259,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:58:11.183Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "65c53a506c6fc773dade-daad9f0f20ae10c926eb",
+          "file": "workshop.spec.ts",
+          "line": 181,
+          "column": 1
+        },
+        {
+          "title": "disponibilidade cruza execução e ausências, com cancelamento motivado",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2711,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:24.968Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2584,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:58:13.453Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "65c53a506c6fc773dade-a2c2249903e9e1a7ff40",
+          "file": "workshop.spec.ts",
+          "line": 207,
+          "column": 1
+        },
+        {
+          "title": "técnico acompanha item próprio em OS de outro responsável sem editar a ordem",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2468,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:27.700Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2488,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:58:16.051Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "65c53a506c6fc773dade-a452833bfdbc1668bdce",
+          "file": "workshop.spec.ts",
+          "line": 237,
+          "column": 1
+        },
+        {
+          "title": "nova versão libera reservas e revisão preserva a comissão substituída",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2899,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:30.176Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2670,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:58:18.549Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "65c53a506c6fc773dade-6fd62acd5a94b9bbfb93",
+          "file": "workshop.spec.ts",
+          "line": 259,
+          "column": 1
+        },
+        {
+          "title": "busca global abre o registro certo no desktop e no celular e respeita perfis",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2158,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:33.086Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2605,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:58:21.230Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "65c53a506c6fc773dade-f0889abfb62753d908f4",
+          "file": "workshop.spec.ts",
+          "line": 291,
+          "column": 1
+        },
+        {
+          "title": "CSV de estoque e apuração exporta somente o recorte demonstrativo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1514,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:35.253Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1273,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:58:23.845Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "65c53a506c6fc773dade-211ac3f83654ec9a74d9",
+          "file": "workshop.spec.ts",
+          "line": 316,
+          "column": 1
+        },
+        {
+          "title": "falha de cadastro duplicado mantém formulário sem criar peça ou sucesso fictício",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium-deploy-v1.2",
+              "projectName": "desktop-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1392,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:56:36.780Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium-deploy-v1.2",
+              "projectName": "mobile-chromium-deploy-v1.2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1099,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-12T20:58:25.131Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "65c53a506c6fc773dade-923e32c441b15229c489",
+          "file": "workshop.spec.ts",
+          "line": 342,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-12T20:54:47.005Z",
+    "duration": 219395.888,
+    "expected": 122,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
