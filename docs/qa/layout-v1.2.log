@@ -1,0 +1,66 @@
+{
+  "path": "docs/qa/layout-v1.2.json",
+  "version": "1.2.0",
+  "viewports": 8,
+  "passed": true,
+  "browserErrors": [],
+  "assetErrors": [],
+  "checks": [
+    {
+      "name": "wide",
+      "width": 1654,
+      "height": 900,
+      "passed": true,
+      "obstructions": []
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "obstructions": []
+    },
+    {
+      "name": "laptop",
+      "width": 1366,
+      "height": 768,
+      "passed": true,
+      "obstructions": []
+    },
+    {
+      "name": "tablet-landscape",
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "obstructions": []
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024,
+      "passed": true,
+      "obstructions": []
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "obstructions": []
+    },
+    {
+      "name": "small-mobile",
+      "width": 360,
+      "height": 800,
+      "passed": true,
+      "obstructions": []
+    },
+    {
+      "name": "minimum",
+      "width": 320,
+      "height": 740,
+      "passed": true,
+      "obstructions": []
+    }
+  ]
+}

@@ -1,5 +1,12 @@
 # Operação, falhas, responsabilidades e backups
 
+## Complemento 1.2 — preparação de operação real
+
+Consulte `ATIVACAO-REAL.md` e `HOMOLOGACAO-REAL-MODELO.md`. `scripts/backup-encrypted.sh` fornece um exemplo opt-in de dump PostgreSQL cifrado por age, fora do projeto, com checksum e pipefail. Requer ferramentas/serviço/recipient/destino autorizados; não agenda, não envia a nuvem nem restaura automaticamente. Foi verificada a sintaxe, não uma cópia remota. Configurações Auth/SMTP/cofre e arquivos privados precisam de política própria.
+
+Outbox fiscal privada tem lease/fencing e recuperação por consulta. Não há produtor/runner/provedor de emissão implantado. Não tratar timeout como rejeição, não reenviar com outra chave e não apagar jobs para tentar corrigir uma emissão. Toda demonstração continua SEM VALIDADE FISCAL.
+
+
 ## Acesso e uso da demonstração
 
 Sem senha ou cadastro: abra `/painel` para gestão e `/cliente` para o portal fictício. Os avisos deixam claro que não há operação real. Os dados ficam em memória e `sessionStorage`; o modo conectado não usa esse armazenamento para guardar dados de clientes.
@@ -12,8 +19,11 @@ A sessão normalmente desaparece ao fechar a aba/janela; também pode ser limpa 
 2. Cliente e veículo → nova OS → queixa → diagnóstico → orçamento v1 → disponibilizar.
 3. Portal do cliente → conferir versão/condições → confirmar aprovação/recusa.
 4. A versão atual aprovada permite execução. Uma versão adicional preserva a anterior e pausa o fluxo para nova autorização.
-5. Registrar parcial/estorno e custo. Esses botões não cobram nem devolvem dinheiro em banco real.
-6. Conteúdo → editar/adaptar legenda → revisão de direitos → proprietário aprova → simulação por destino. A falha parcial é intencionalmente demonstrável e não implica acesso às redes.
+5. Na OS autorizada, reservar a peça vinculada e depois baixar ou liberar. Devolver somente material não utilizado, sempre referenciando a baixa. A unidade não muda após o primeiro movimento.
+6. Conferir disponibilidade, alocar item de mão de obra ao mecânico, iniciar/pausar/retomar/concluir. A etapa geral da OS deve estar em execução para iniciar. Concluir/cancelar os serviços e resolver reservas antes de avançar para testes/entrega.
+7. Configurar comissão opcional, conferir previsão/geração e registrar parcial/estorno de repasse, sem transferência externa. A regra é demonstrativa, não folha/política salarial real.
+8. Registrar parcial/estorno de recebimento do cliente e custo manual, sem repetir o custo já calculado de peças/comissões. Esses botões não cobram nem devolvem dinheiro em banco real.
+9. Conteúdo → editar/adaptar legenda → revisão de direitos → proprietário aprova → simulação por destino. A falha parcial é intencionalmente demonstrável e não implica acesso às redes.
 
 ## Rotina se um ambiente conectado for homologado
 
@@ -21,7 +31,8 @@ A sessão normalmente desaparece ao fechar a aba/janela; também pode ser limpa 
 |---|---|---|
 | Antes da abertura | Responsável operacional designado | Conferir agenda/solicitações, pendências de autorização e próximos contatos |
 | Por atendimento | Recepção + técnico responsável | Verificar relato versus diagnóstico, versão autorizada, itens, checklist e previsão; registrar alterações/retornos |
-| Fechamento diário | Financeiro autorizado | Conferir lançamentos/estornos/custos e documentos; não confundir registro no sistema com liquidação bancária |
+| Por movimentação/alocação | Recepção + responsável operacional | Conferir peça/unidade/OS/versão autorizada, registrar motivo e validar horários/conflitos; não usar ajuste para simular consumo da OS |
+| Fechamento diário | Proprietário/financeiro autorizado | Conferir lançamentos/estornos/custos, comissões previstas/geradas e repasses parciais; não confundir registro no sistema com liquidação bancária |
 | Diariamente, política a definir | Administrador da infraestrutura | Saúde da aplicação/banco, backups, espaço, limites, logs sem dados pessoais e alertas |
 | Periodicamente | Responsável de conteúdo | Direitos, autorização de imagens, versão aprovada e resultado real de cada destino quando existir adaptador |
 | Mensalmente ou conforme risco | Responsável técnico + de dados | Acessos individuais, atualizações, custos, retenção, restauração isolada e revisão de incidentes |
@@ -39,12 +50,16 @@ A sessão normalmente desaparece ao fechar a aba/janela; também pode ser limpa 
 | 409 / dados mudaram | Atualizar, conferir a versão e reaplicar conscientemente; não reenviar cegamente um pagamento com novo ID |
 | 422 / validação | Corrigir campos conforme o erro; verificar cliente/veículo, etapa, versão, saldo ou horário |
 | 429 / tentativas | Aguardar a janela e investigar tentativas/proxy; não remover limites para resolver |
-| 503 / ambiente sem configuração | Verificar modos iguais, variáveis no servidor, origem HTTPS e status do provedor; nunca publicar segredo para depurar |
+| 503 / ambiente sem configuração ou migração | Verificar modos iguais, variáveis no servidor, origem HTTPS, três migrações e status do provedor; nunca publicar segredo para depurar |
 | Proxy/502 ou assets quebrados | Conferir processo Node, pasta de build/standalone, cópia de public/static, porta e logs de infraestrutura sem corpos de requisição |
 | Banco indisponível | Interromper operações dependentes, comunicar indisponibilidade e executar plano de recuperação. Não mostrar sucesso ou criar um modo offline improvisado |
+| Estoque insuficiente | Conferir físico, reservas pendentes, consumo/devoluções e quantidade autorizada. Nunca contornar com ajuste que consuma reservas |
+| Autorização substituída | Aprovar a nova versão e revisar o serviço aberto; se o item foi removido, cancelar motivadamente e alocar outro aprovado. Não retomar pela versão antiga |
+| Mecânico em conflito | Conferir agenda, ausências e serviços. Se faz parte de agendamento confirmado, vincular o horário correto para não contar a mesma ocupação duas vezes |
+| Repasse excedente | Conferir comissão gerada, parciais e estornos. Previsão não pode ser paga; para cancelar comissão incorreta, estornar primeiro os repasses líquidos |
 | Post “simulado” | Não existe envio real a recuperar. Na futura integração, reconciliar com o provedor antes de reenviar para evitar duplicatas |
 
-`/api/health` verifica modo/configuração parcial e responde `databaseConnection: not-used` na demo ou `not-probed` conectado. **Não executa consulta de prontidão do banco** e não garante existência de workspace, MFA, SMTP ou acesso à rede. Monitoramento real precisa verificação sintética autenticada própria, sem colocar credenciais em URL/logs.
+`/api/health` verifica modo/configuração parcial e responde `databaseConnection: not-used` na demo ou `not-checked` conectado. **Não executa consulta de prontidão do banco** e não garante existência de workspace, MFA, SMTP ou acesso à rede. Monitoramento real precisa verificação sintética autenticada própria, sem colocar credenciais em URL/logs.
 
 ## Custos e compromissos
 
@@ -57,7 +72,7 @@ A sessão normalmente desaparece ao fechar a aba/janela; também pode ser limpa 
 
 ## Backups: o que foi realmente provado
 
-`tests/restore.test.ts` cria um snapshot gzip de **PGlite local**, abre uma instância independente e verifica registros, vínculos, RLS, isolamento de cliente e proibição de apagar auditoria. Isso valida uma restauração local de teste, **não** backup do Supabase hospedado, recuperação de Auth, objetos de storage, PITR, RPO/RTO ou desastre da hospedagem.
+`tests/restore.test.ts` cria um snapshot gzip de **PGlite local**, abre uma instância independente e verifica registros, vínculos, RLS, isolamento de cliente, seis peças, quatro serviços/quatro comissões e um repasse demonstrativo e proibição de apagar auditoria. Isso valida uma restauração local de teste, **não** backup do Supabase hospedado, recuperação de Auth, objetos de storage, PITR, RPO/RTO ou desastre da hospedagem.
 
 O código-fonte, lockfile e migrações acompanham o ZIP. Não há banco real nesta demonstração e nenhum dump remoto foi produzido. Scripts de migração não são backup de dados.
 
@@ -91,7 +106,7 @@ Esse comando não foi executado contra serviço remoto; o arquivo contém dados 
 
 1. Provisionar destino **isolado** dedicado e conferir autorização/custo. Nunca usar `--clean` ou restaurar em cima da origem ativa para testar.
 2. Seguir o restore oficial compatível do provedor para banco/Auth/roles, segredos e objetos; aplicar a versão de esquema correta. Se usar cópia restrita de tabelas, preparar Auth e migrações compatíveis antes da carga de dados.
-3. Comparar contagens por categoria, vínculos, versões/respostas, recebimentos/estornos e auditoria. Testar proprietário, técnico e pelo menos dois clientes também pela API.
+3. Comparar contagens por categoria, vínculos, versões/respostas, recebimentos/estornos, estoque/reservas/baixas/devoluções, serviços/regras/fotografias/repasses e auditoria. Testar proprietário, técnico e pelo menos dois clientes também pela API.
 4. Verificar consistência dos objetos privados e links temporários se existirem. Não publicar mídia original.
 5. Medir tempo de recuperação e perda máxima de dados; registrar o resultado e aprovação do responsável, sem inventar RPO/RTO.
 6. Simular troca do aplicativo sem enviar mensagens/cobranças/posts. Reativar integrações somente após reconciliação e aprovação.

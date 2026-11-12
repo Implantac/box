@@ -1,3 +1,5 @@
+import '../../workshop.css';
+import '../../fiscal.css';
 import { Dashboard } from '@/components/dashboard';
 import { protectPage } from '@/lib/server/auth';
 export const dynamic='force-dynamic';

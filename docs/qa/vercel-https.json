@@ -1,0 +1,46 @@
+[
+  {
+    "url": "https://box-portfolio-implantacs-projects.vercel.app/",
+    "status": 302,
+    "tlsCertificateVerified": true,
+    "redirectWithoutQuery": "https://vercel.com/sso-api"
+  },
+  {
+    "url": "https://box-portfolio-nk95xguu7-implantacs-projects.vercel.app/",
+    "status": 302,
+    "tlsCertificateVerified": true,
+    "redirectWithoutQuery": "https://vercel.com/sso-api"
+  },
+  {
+    "url": "https://box-portfolio-orpin.vercel.app/",
+    "status": 200,
+    "tlsCertificateVerified": true,
+    "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/",
+    "anonymous": true,
+    "noindexHeader": true
+  },
+  {
+    "url": "https://box-portfolio-orpin.vercel.app/api/health",
+    "status": 200,
+    "tlsCertificateVerified": true,
+    "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/api/health",
+    "anonymous": true,
+    "noindexHeader": true
+  },
+  {
+    "url": "https://box-portfolio-orpin.vercel.app/painel",
+    "status": 200,
+    "tlsCertificateVerified": true,
+    "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel",
+    "anonymous": true,
+    "noindexHeader": true
+  },
+  {
+    "url": "https://box-portfolio-orpin.vercel.app/cliente",
+    "status": 200,
+    "tlsCertificateVerified": true,
+    "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/cliente",
+    "anonymous": true,
+    "noindexHeader": true
+  }
+]

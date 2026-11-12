@@ -1,0 +1,200 @@
+/* A marca ocupa seu próprio espaço: imagem, legenda e mensagem nunca se sobrepõem. */
+.public-site.home-page{--home-gutter:clamp(24px,4vw,48px);--home-section:clamp(64px,7vw,100px)}
+.home-page .public-container{max-width:1360px;padding-inline:var(--home-gutter)}
+.home-page .public-header{height:88px}
+.home-page .hero{background:radial-gradient(ellipse at 76% 42%,#33361e38,transparent 57%)}
+.home-page .hero-grid{grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);gap:clamp(36px,4.5vw,64px);min-height:0;padding-block:44px 40px}
+.home-page .hero-copy{min-width:0;max-width:620px}
+.home-page .hero-location{flex-wrap:wrap;row-gap:7px;margin-bottom:26px;font-size:10px;letter-spacing:1.45px}
+.public-site.home-page .hero h1{font-size:clamp(44px,4.15vw,62px);line-height:1.13;letter-spacing:-.045em;font-weight:750;max-width:620px}
+.home-page .hero h1 span{display:block;text-wrap:balance}
+.home-page .hero .hero-copy>p{font-size:14px;line-height:1.95;max-width:45ch;margin-top:26px}
+.home-page .hero-actions{flex-wrap:wrap;gap:12px;margin:28px 0 25px}
+.home-page .hero-actions .btn{min-height:50px;padding:13px 20px;font-size:12px}
+.home-page .hero-assurances{flex-wrap:wrap;gap:12px 22px;font-size:12px;line-height:1.7}
+.home-page .hero-assurances>span{align-items:flex-start;min-width:0}
+.home-page .hero-assurances svg{margin-top:2px}
+.home-page .hero-art{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;width:100%;height:auto;min-width:0;max-width:600px;margin:0;justify-self:end}
+.home-page .art-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;width:min(100%,560px);font-size:9px;line-height:1.7;letter-spacing:1.1px;color:#b9c4b1}
+.home-page .hero-emblem-stage{position:relative;display:grid;place-items:center;width:min(100%,560px);aspect-ratio:1}
+.home-page .hero-emblem{position:relative;inset:auto;left:auto;top:auto;transform:none;z-index:1;width:100%;max-width:none;height:auto;aspect-ratio:1;object-fit:contain;mix-blend-mode:lighten}
+.home-page .hero-orbit{z-index:0;pointer-events:none;width:86%;height:86%;border-color:#c3a36312}
+.home-page .orbit-two{width:98%;height:98%;border-style:dashed;border-color:#c3a3630b}
+.home-page .hero-art-caption{display:flex;align-items:center;justify-content:space-between;gap:12px;width:min(100%,560px);padding-top:14px;border-top:1px solid #ffffff10;color:#b7bca9;font-size:9px;letter-spacing:1.1px;line-height:1.7}
+.home-page .hero-art-caption>span:first-child{color:#cbb278}
+.home-page .hero-bottom{display:flex;align-items:center;justify-content:space-between;gap:30px;padding-block:22px 25px;position:relative}
+.home-page .hero-connection{display:flex;align-items:center;gap:13px;min-width:0;text-transform:none;letter-spacing:0}
+.home-page .hero-connection-icon{display:grid;place-items:center;flex-shrink:0;width:40px;height:40px;border:1px solid #c3a36335;border-radius:50%;color:#cbb278}
+.home-page .hero-connection b{display:block;font-size:12px;font-weight:650;line-height:1.7;color:#e6e8dc}
+.home-page .hero-connection small{display:block;font-size:11px;color:#a3ae9d;line-height:1.7;margin-top:2px}
+.home-page .hero-bottom a{flex-shrink:0;min-height:40px;font-size:10px;letter-spacing:.7px}
+.home-page .value-ribbon .public-container{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-block:24px}
+.home-page .value-ribbon span{width:auto;min-width:0;font-size:12px;line-height:1.7}
+.home-page .public-section{padding-block:var(--home-section);scroll-margin-top:24px}
+.home-page .section-heading{align-items:flex-end;gap:48px;margin-bottom:40px}
+.home-page .section-heading>div{flex:1;min-width:0}
+.home-page .section-heading h2,.home-page .public-section h2{font-size:clamp(31px,3vw,42px);line-height:1.22;letter-spacing:-.04em;font-weight:700}
+.home-page .section-heading>p{width:36%;max-width:410px;font-size:13px;line-height:1.95}
+.home-page .service-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.home-page .service-card{min-width:0;min-height:324px;padding:30px;gap:0;border-radius:7px}
+.home-page .service-top{margin-bottom:32px}
+.home-page .service-card h3{font-size:20px;line-height:1.4;margin-bottom:12px}
+.home-page .service-card p{font-size:13px;line-height:1.9;max-width:none;margin-bottom:25px}
+.home-page .service-link{margin-top:auto;padding-top:21px;font-size:11px;gap:12px;line-height:1.7}
+.home-page .experience-grid{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:clamp(44px,6vw,80px)}
+.home-page .technical-visual{width:100%;max-width:none;border-radius:7px}
+.home-page .technical-label{gap:15px;padding:22px 24px;font-size:10px;line-height:1.8}
+.home-page .visual-caption{padding:8px 24px 24px;font-size:11px;line-height:1.8;align-items:center}
+.home-page .experience-copy{min-width:0}
+.home-page .experience-copy h2{margin-bottom:24px}
+.home-page .experience-copy>p{font-size:14px;line-height:1.95;max-width:44ch}
+.home-page .experience-copy ul{gap:14px;margin:26px 0 30px}
+.home-page .experience-copy li{align-items:flex-start;font-size:12px;line-height:1.8}
+.home-page .experience-copy li svg{margin-top:4px}
+.home-page .experience-copy .btn{min-height:46px;font-size:12px}
+.home-page .process-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-block:46px 48px}
+.home-page .process-step{min-width:0}
+.home-page .process-step h3{font-size:16px;line-height:1.5;margin-bottom:12px}
+.home-page .process-step p{font-size:13px;line-height:1.9;max-width:none}
+.home-page .process-step>span{margin-bottom:22px}
+.home-page .concept-cta{padding:36px 38px;gap:32px;border-radius:7px}
+.home-page .concept-cta>div{max-width:650px;min-width:0}
+.home-page .concept-cta h3{font-size:22px;line-height:1.4}
+.home-page .concept-cta p{font-size:13px;line-height:1.85}
+.home-page .concept-cta .btn{flex-shrink:0;min-height:48px;font-size:12px}
+.home-page .faq-grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(40px,6vw,80px)}
+.home-page .faq-grid>div>p{font-size:13px;line-height:1.9;max-width:32ch;margin-top:20px}
+.home-page .faq-item button{font-size:13px;padding-block:23px;min-height:64px}
+.home-page .faq-item>p{font-size:13px;line-height:1.95;padding-right:30px}
+.home-page .contact-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(48px,7vw,96px);align-items:center}
+.home-page .contact-grid>div:first-child{min-width:0}
+.home-page .contact-section h2{font-size:clamp(36px,3.4vw,47px);line-height:1.2;margin-bottom:26px}
+.home-page .contact-grid>div>p{font-size:14px;line-height:1.95;max-width:42ch}
+.home-page .contact-detail{margin-top:28px;gap:14px}
+.home-page .contact-detail b{font-size:12px}
+.home-page .contact-detail span{font-size:12px;line-height:1.9}
+.home-page .lead-form,.home-page .lead-success{width:100%;max-width:550px;min-width:0;padding:34px;justify-self:end;border-radius:8px}
+.home-page .lead-form h3{font-size:25px;line-height:1.35}
+.home-page .lead-form>p,.home-page .lead-success>p{font-size:13px;line-height:1.9}
+.home-page .lead-form .field>span{font-size:12px}
+.home-page .lead-form input,.home-page .lead-form select{font-size:12px;min-height:44px}
+.home-page .lead-form .btn{font-size:12px;min-height:48px}
+.home-page .form-kicker{font-size:10px;line-height:1.8;letter-spacing:1.1px}
+.home-page .form-privacy{align-items:flex-start;font-size:11px;line-height:1.8}
+.home-page .form-privacy svg{margin-top:3px}
+.home-page .public-footer{padding-top:64px}
+.home-page .footer-top{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr);gap:64px;padding-bottom:48px}
+.home-page .footer-top>div{min-width:0}
+.home-page .footer-top>div>a:not(.brand){min-height:40px;font-size:12px;line-height:1.7;max-width:260px}
+.home-page .footer-top p{font-size:12px;line-height:1.9}
+.home-page .footer-top .eyebrow{font-size:10px;line-height:1.8}
+.home-page .footer-bottom{font-size:10px;letter-spacing:.6px;line-height:1.9;padding-block:24px;gap:24px}
+@media(min-width:1600px){
+ .home-page .hero-grid{padding-block:52px 44px}
+}
+@media(max-width:1100px){
+ .home-page .hero-grid{gap:34px;padding-block:40px}
+ .public-site.home-page .hero h1{font-size:clamp(42px,4.5vw,50px)}
+ .home-page .hero-actions .btn{padding-inline:15px}
+ .home-page .art-heading{font-size:8px;letter-spacing:.9px;gap:10px}
+ .home-page .service-card{padding:25px;min-height:342px}
+ .home-page .service-card h3{font-size:18px}
+ .home-page .concept-cta{padding:30px}
+ .home-page .footer-top{gap:40px}
+}
+@media(max-width:900px){
+ .home-page .hero-grid{grid-template-columns:minmax(0,1fr);gap:42px;padding-block:36px 40px}
+ .home-page .hero-art{order:-1;justify-self:center;max-width:500px}
+ .home-page .hero-copy{justify-self:center;width:100%;max-width:640px}
+ .public-site.home-page .hero h1{font-size:clamp(44px,6.5vw,58px);max-width:640px}
+ .home-page .hero .hero-copy>p{max-width:52ch}
+ .home-page .hero-location{margin-bottom:22px}
+ .home-page .hero-actions{margin-block:25px}
+ .home-page .section-heading{flex-direction:column;align-items:flex-start;gap:22px}
+ .home-page .section-heading>p{width:100%;max-width:56ch}
+ .home-page .experience-grid,.home-page .contact-grid{grid-template-columns:minmax(0,1fr);gap:40px}
+ .home-page .technical-visual{max-width:640px;justify-self:center}
+ .home-page .experience-copy{width:100%;max-width:640px;justify-self:center}
+ .home-page .experience-copy>p{max-width:58ch}
+ .home-page .concept-cta{flex-direction:column;align-items:flex-start;gap:24px}
+ .home-page .faq-grid{grid-template-columns:minmax(0,1fr);gap:28px}
+ .home-page .faq-grid>div>p{max-width:52ch}
+ .home-page .contact-grid>div:first-child{max-width:640px;width:100%;justify-self:center}
+ .home-page .lead-form,.home-page .lead-success{max-width:640px;justify-self:center}
+ .home-page .footer-top{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 48px}
+ .home-page .footer-top>div:first-child{grid-column:1/-1}
+}
+@media(max-width:800px){
+ .home-page .public-header{height:80px}
+ .home-page .value-ribbon .public-container{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px}
+ .home-page .process-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+ .home-page .service-card{padding:22px;min-height:344px}
+ .home-page .service-card h3{font-size:17px}
+ .home-page .footer-bottom{flex-direction:column;gap:10px}
+}
+@media(max-width:720px){
+ .home-page .service-grid{grid-template-columns:minmax(0,1fr);gap:18px}
+ .home-page .service-card{min-height:0;padding:28px}
+ .home-page .service-top{margin-bottom:25px}
+ .home-page .service-card h3{font-size:21px}
+ .home-page .service-card p{max-width:50ch}
+ .home-page .service-link{margin-top:0}
+}
+@media(max-width:600px){
+ .public-site.home-page{--home-gutter:24px;--home-section:64px}
+ .home-page .hero-grid{gap:32px;padding-block:28px 32px}
+ .home-page .hero-art{max-width:380px;gap:12px}
+ .home-page .art-heading{font-size:8px;letter-spacing:.5px}
+ .home-page .hero-art-caption{font-size:8px;letter-spacing:.75px;padding-top:12px}
+ .public-site.home-page .hero h1{font-size:clamp(36px,9.7vw,46px);line-height:1.16;letter-spacing:-.04em}
+ .home-page .hero-location{font-size:9px;letter-spacing:.85px;gap:8px}
+ .home-page .hero .hero-copy>p{font-size:14px;max-width:44ch;margin-top:22px}
+ .home-page .hero-actions{gap:10px;margin-block:24px}
+ .home-page .hero-actions .btn{font-size:12px;min-height:48px;padding:12px 16px}
+ .home-page .hero-assurances{font-size:11px;gap:11px 18px}
+ .home-page .hero-bottom{flex-direction:column;align-items:stretch;gap:18px;padding-block:22px}
+ .home-page .hero-bottom a{justify-content:space-between;border-top:1px solid #ffffff10;padding-top:15px;min-height:38px}
+ .home-page .value-ribbon .public-container{padding-block:22px;gap:20px 16px}
+ .home-page .value-ribbon span{font-size:11px;align-items:flex-start;gap:8px}
+ .home-page .value-ribbon svg{margin-top:2px}
+ .home-page .section-heading{margin-bottom:30px;gap:20px}
+ .home-page .section-heading h2,.home-page .public-section h2{font-size:32px;line-height:1.25}
+ .home-page .technical-label{font-size:8px;letter-spacing:.6px;padding:18px}
+ .home-page .visual-caption{font-size:10px;padding:8px 18px 20px}
+ .home-page .experience-grid,.home-page .contact-grid{gap:32px}
+ .home-page .experience-copy li{font-size:12px}
+ .home-page .process-grid{gap:30px 22px;margin-block:34px 36px}
+ .home-page .process-step h3{font-size:15px}
+ .home-page .process-step p{font-size:12px;line-height:1.9}
+ .home-page .process-step>span{margin-bottom:18px}
+ .home-page .process-step:nth-child(even):before{display:none}
+ .home-page .concept-cta{padding:26px;gap:23px}
+ .home-page .concept-cta h3{font-size:21px}
+ .home-page .concept-cta .btn{white-space:normal;text-align:left}
+ .home-page .faq-item button{font-size:13px;padding-block:21px}
+ .home-page .faq-item>p{padding-right:12px}
+ .home-page .contact-section h2{font-size:37px;line-height:1.2}
+ .home-page .contact-detail{margin-top:25px}
+ .home-page .lead-form,.home-page .lead-success{padding:26px 24px}
+ .home-page .lead-form h3{font-size:25px}
+ .home-page .lead-form .form-grid{grid-template-columns:minmax(0,1fr)}
+ .home-page .lead-form input,.home-page .lead-form select{font-size:16px}
+ .home-page .form-kicker{font-size:9px;letter-spacing:.7px}
+ .home-page .public-footer{padding-top:52px}
+ .home-page .footer-top{grid-template-columns:minmax(0,1fr);gap:32px;padding-bottom:36px}
+ .home-page .footer-top>div:first-child{grid-column:auto}
+ .home-page .footer-top>div>a:not(.brand){max-width:none;min-height:44px}
+ .home-page .footer-top .eyebrow{margin-bottom:12px}
+ .home-page .footer-bottom{font-size:9px;letter-spacing:.4px;gap:12px}
+}
+@media(max-width:520px){.home-page .header-cta{display:none}}
+@media(max-width:360px){
+ .public-site.home-page{--home-gutter:20px}
+ .home-page .hero-actions{align-items:stretch}
+ .home-page .hero-actions .btn{flex:1;min-width:0;padding-inline:11px;font-size:11px}
+ .home-page .hero-location{letter-spacing:.4px;font-size:8px}
+ .home-page .process-grid{grid-template-columns:minmax(0,1fr);gap:30px}
+ .home-page .process-step:before{display:none}
+ .home-page .service-card{padding:25px}
+ .home-page .lead-form,.home-page .lead-success{padding:24px 20px}
+}

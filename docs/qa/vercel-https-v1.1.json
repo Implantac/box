@@ -1,0 +1,301 @@
+{
+  "checkedAt": "2026-11-12T18:33:21.402439+00:00",
+  "url": "https://box-portfolio-orpin.vercel.app",
+  "version": "1.1.0",
+  "anonymous": true,
+  "transport": "HTTPS público; certificado e hostname verificados pelo contexto TLS padrão",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/cambio-automatico",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/cambio-automatico",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/bio",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/bio",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/privacidade",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/privacidade",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/entrar",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/entrar",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/entrar/seguranca",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/entrar/seguranca",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/guia",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/guia",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/ordens",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel/ordens",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/clientes",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel/clientes",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/agenda",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel/agenda",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/atendimentos",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel/atendimentos",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/orcamentos",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel/orcamentos",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/financeiro",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel/financeiro",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/conteudo",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel/conteudo",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/relatorios",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel/relatorios",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/configuracoes",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel/configuracoes",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/estoque",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel/estoque",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/mecanicos",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel/mecanicos",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/comissoes",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel/comissoes",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/cliente",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/cliente",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000042",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel/ordens/d0000000-0000-4000-8000-000000000042",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000043",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/painel/ordens/d0000000-0000-4000-8000-000000000043",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/api/health",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/api/health",
+      "certificateVerified": true,
+      "contentType": "application/json",
+      "noindexHeader": "noindex",
+      "nosniff": true
+    },
+    {
+      "path": "/api/site",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/api/site",
+      "certificateVerified": true,
+      "contentType": "application/json",
+      "noindexHeader": "noindex",
+      "nosniff": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "expected": 200,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/robots.txt",
+      "certificateVerified": true,
+      "contentType": "text/plain; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/api/workspace",
+      "status": 403,
+      "expected": 403,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/api/workspace",
+      "certificateVerified": true,
+      "contentType": "application/json",
+      "noindexHeader": "noindex",
+      "nosniff": true
+    },
+    {
+      "path": "/nao-existe-qa",
+      "status": 404,
+      "expected": 404,
+      "urlAfterRedirect": "https://box-portfolio-orpin.vercel.app/nao-existe-qa",
+      "certificateVerified": true,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    }
+  ],
+  "health": {
+    "application": "box-oficina-portfolio",
+    "version": "1.1.0",
+    "mode": "portfolio",
+    "applicationReady": true,
+    "databaseConnection": "not-used",
+    "socialPublishing": "disabled"
+  },
+  "robotsDisallowAll": true,
+  "routes200": 26,
+  "errors": [],
+  "passed": true
+}

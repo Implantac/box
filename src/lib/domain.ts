@@ -1,15 +1,20 @@
 import { type Command, type Role, type Workspace, type OrderStatus, ROLE_LABELS, id } from './model';
 import { latestQuote, netPaid, quoteTotal } from './format';
+import { WORKSHOP_PERMISSIONS, isWorkshopCommand, mutateWorkshop, validateOperationalQuote, pauseServicesForQuote, cancelOpenOrderWork, assertWorkFinished, assertAppointmentCapacity } from './workshop-domain';
+import { DEMO_NOW } from './workshop-model';
+import { FISCAL_PERMISSIONS, isFiscalCommand, mutateFiscal } from './fiscal-domain';
 
 export const MODULE_ROLES: Record<string, Role[]> = {
  inicio: ['owner', 'reception', 'technician', 'finance', 'marketing'],
  ordens: ['owner', 'reception', 'technician'], clientes: ['owner', 'reception'], agenda: ['owner', 'reception', 'technician'],
  atendimentos: ['owner', 'reception'], orcamentos: ['owner', 'reception', 'finance'], financeiro: ['owner', 'finance'],
- conteudo: ['owner', 'marketing'], relatorios: ['owner', 'finance'], configuracoes: ['owner']
+ estoque: ['owner','reception','finance'], mecanicos: ['owner','reception','technician','finance'], comissoes: ['owner','finance'],
+ conteudo: ['owner', 'marketing'], relatorios: ['owner', 'finance'], configuracoes: ['owner'], fiscal:['owner','finance'], ativacao:['owner']
 };
 export const canSee = (role: Role, module: string) => (MODULE_ROLES[module] || []).includes(role);
 export const canMoney = (role: Role) => role === 'owner' || role === 'finance';
 const ALLOWED: Record<Command['type'], Role[]> = {
+ ...WORKSHOP_PERMISSIONS, ...FISCAL_PERMISSIONS,
  create_customer: ['owner', 'reception'], create_order: ['owner', 'reception'], transition_order: ['owner', 'reception', 'technician'],
  create_quote: ['owner', 'reception'], set_quote_status: ['owner', 'reception', 'customer'], create_appointment: ['owner', 'reception'], set_appointment_status: ['owner', 'reception'],
  record_payment: ['owner', 'finance'], record_cost: ['owner', 'finance'], create_lead: ['owner', 'reception'], set_lead_status: ['owner', 'reception'],
@@ -22,11 +27,11 @@ export const TRANSITIONS: Record<OrderStatus, OrderStatus[]> = {
 function ensure(condition: unknown, message: string): asserts condition { if (!condition) throw new Error(message); }
 function integer(value: number, name: string, min = 0, max = 100000000) { ensure(Number.isSafeInteger(value) && value >= min && value <= max, `${name}: valor inválido.`); }
 function text(value: string, name: string, min = 1, max = 3000) { ensure(typeof value === 'string' && value.trim().length >= min && value.length <= max, `${name}: confira o preenchimento.`); }
-export function applyCommand(input: Workspace, command: Command, role: Role, options: { portfolio: boolean; customerId?: string; expectedRevision?: number; actorName?: string } = { portfolio: true }): Workspace {
+export function applyCommand(input: Workspace, command: Command, role: Role, options: { portfolio: boolean; customerId?: string; expectedRevision?: number; actorName?: string; actorId?: string; now?: string } = { portfolio: true }): Workspace {
  ensure(ALLOWED[command.type]?.includes(role), 'Este perfil não tem permissão para essa ação.');
  if (options.expectedRevision !== undefined) ensure(input.revision === options.expectedRevision, 'Os dados mudaram. Atualize antes de tentar novamente.');
- const s = structuredClone(input); const c = command; const now = new Date().toISOString(); let entityId = ''; let action = c.type.replaceAll('_', ' ');
- switch (c.type) {
+ const s = structuredClone(input); const c = command; const now = options.now || new Date().toISOString(); const operationTime = options.now || (options.portfolio ? DEMO_NOW : now); let entityId = ''; let action = c.type.replaceAll('_', ' ');
+ if (isFiscalCommand(c)) { const result=mutateFiscal(s,c,{portfolio:options.portfolio,now});if(result.duplicate)return input;entityId=result.entityId;action=result.action; } else if (isWorkshopCommand(c)) { const result=mutateWorkshop(s,c,role,options); if(result.duplicate)return input; entityId=result.entityId||'';action=result.action||''; } else switch (c.type) {
   case 'create_customer': {
    text(c.customer.name, 'Nome', 3, 120); ensure(!s.customers.some(x => x.id === c.customer.id), 'Cadastro já existe.');
    if (c.customer.email) ensure(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c.customer.email), 'E-mail inválido.');
@@ -55,6 +60,8 @@ export function applyCommand(input: Workspace, command: Command, role: Role, opt
     if (c.status === 'cancelada') text(c.note || '', 'Motivo do cancelamento', 5, 500);
     if (c.status === 'pronto') ensure((c.checklist || o.checklist).includes('Teste final realizado'), 'Registre o teste final no checklist antes de liberar para entrega.');
    }
+   if(c.status!==o.status&&['testes','pronto','entregue'].includes(c.status))assertWorkFinished(s,o.id);
+   if(c.status==='cancelada')cancelOpenOrderWork(s,o.id,operationTime);
    o.status = c.status; if (c.status === 'cancelada') o.cancellationReason = c.note; if (c.diagnosis !== undefined) { text(c.diagnosis, 'Diagnóstico', 0, 3000); o.diagnosis = c.diagnosis; }
    if (c.checklist) { ensure(c.checklist.length <= 10 && c.checklist.every(x => x.length < 120), 'Checklist inválido.'); o.checklist = c.checklist; }
    entityId = o.id; action = `OS atualizada: ${c.status}${c.note ? ' • motivo registrado' : ''}`; break;
@@ -64,9 +71,11 @@ export function applyCommand(input: Workspace, command: Command, role: Role, opt
    ensure(!s.quotes.some(q=>q.id===c.quote.id), 'Orçamento já existe.');
    ensure(c.quote.items.length > 0 && c.quote.items.length <= 30, 'Adicione de 1 a 30 itens.');
    c.quote.items.forEach(item => { text(item.description, 'Item', 3, 200); integer(item.quantity, 'Quantidade', 1, 999); integer(item.unitCents, 'Preço'); });
+   validateOperationalQuote(s,c.quote);
    integer(c.quote.discountCents, 'Desconto'); ensure(quoteTotal(c.quote) > 0, 'Total deve ser maior que zero.');
    const last = latestQuote(s.quotes, o.id); ensure(c.quote.version === (last?.version || 0) + 1, 'Versão desatualizada. Reabra o orçamento.');
    s.quotes.unshift({ ...c.quote, status: 'rascunho', createdAt: now, respondedAt: undefined, evidence: undefined });
+   pauseServicesForQuote(s,o.id,operationTime);
    o.currentQuoteId=c.quote.id;o.currentQuoteVersion=c.quote.version;
    if (['aguardando_pecas','execucao','testes','pronto'].includes(o.status)) o.status = 'aguardando_aprovacao';
    entityId = c.quote.id; action = `Orçamento v${c.quote.version} preservado`; break;
@@ -88,7 +97,8 @@ export function applyCommand(input: Workspace, command: Command, role: Role, opt
   case 'create_appointment': {
    const a = c.appointment; const customer = s.customers.find(x => x.id === a.customerId); ensure(customer, 'Cliente inválido.');
    ensure(Number.isFinite(Date.parse(a.startsAt)), 'Data ou horário inválido.'); integer(a.duration, 'Duração', 15, 480); text(a.service, 'Serviço', 3, 200);
-   ensure(!s.appointments.some(x => x.status !== 'cancelado' && x.technician === a.technician && Date.parse(x.startsAt) < Date.parse(a.startsAt) + a.duration*60000 && Date.parse(x.startsAt) + x.duration*60000 > Date.parse(a.startsAt)), 'Esse responsável já tem um horário reservado nesse intervalo.');
+   assertAppointmentCapacity(s,a);
+   ensure(!s.appointments.some(x => ['solicitado','confirmado'].includes(x.status) && x.technician === a.technician && Date.parse(x.startsAt) < Date.parse(a.startsAt) + a.duration*60000 && Date.parse(x.startsAt) + x.duration*60000 > Date.parse(a.startsAt)), 'Esse responsável já tem um horário reservado nesse intervalo.');
    ensure(!s.appointments.some(x=>x.id===a.id), 'Agendamento já existe.');
    s.appointments.push({ ...a, customerName: customer.name }); entityId = a.id; action = 'Horário reservado na agenda'; break;
   }

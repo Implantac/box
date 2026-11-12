@@ -1,6 +1,6 @@
 {
   "name": "box-oficina-portfolio",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "description": "Portfólio integrado de oficina: site, landing page, gestão e conteúdo. Demonstração isolada e adaptador Supabase.",
   "engines": {
@@ -14,7 +14,8 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "check": "npm run typecheck && npm test && npm run build",
-    "db:check": "vitest run tests/database.test.ts tests/restore.test.ts"
+    "db:check": "vitest run tests/database.test.ts tests/workshop-database.test.ts tests/fiscal-database.test.ts tests/restore.test.ts",
+    "preflight": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/preflight.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",

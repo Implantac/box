@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-11-12T20:27:57.599697+00:00",
+  "buildMode": "connected",
+  "runtimeMode": "connected",
+  "credentialsConfigured": false,
+  "externalIntegrationTested": false,
+  "checks": [
+    {
+      "path": "/api/health",
+      "status": 503,
+      "response": {
+        "application": "box-oficina-portfolio",
+        "version": "1.2.0",
+        "mode": "connected",
+        "applicationReady": false,
+        "databaseConnection": "not-checked",
+        "socialPublishing": "disabled",
+        "fiscalIssuance": "disabled",
+        "productionApproved": false
+      }
+    },
+    {
+      "path": "/api/workspace",
+      "status": 503,
+      "response": {
+        "error": "Ambiente conectado não configurado. Consulte o guia de implantação.",
+        "code": "NOT_CONFIGURED"
+      }
+    },
+    {
+      "path": "/api/readiness",
+      "status": 503,
+      "response": {
+        "error": "Ambiente conectado não configurado. Consulte o guia de implantação.",
+        "code": "NOT_CONFIGURED"
+      }
+    },
+    {
+      "path": "/api/fiscal/submit",
+      "status": 503,
+      "response": {
+        "error": "Ambiente conectado não configurado. Consulte o guia de implantação.",
+        "code": "NOT_CONFIGURED"
+      }
+    }
+  ],
+  "buildRuntimeMismatch": {
+    "buildMode": "connected",
+    "runtimeMode": "portfolio",
+    "runtimePublicMode": "portfolio",
+    "status": 503,
+    "response": {
+      "application": "box-oficina-portfolio",
+      "version": "1.2.0",
+      "mode": "portfolio",
+      "applicationReady": false,
+      "databaseConnection": "not-used",
+      "socialPublishing": "disabled",
+      "fiscalIssuance": "disabled",
+      "productionApproved": false
+    },
+    "blocked": true
+  }
+}

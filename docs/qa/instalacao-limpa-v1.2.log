@@ -1,0 +1,27 @@
+v22.23.5
+10.8.2
+
+added 91 packages in 11s
+
+> box-oficina-portfolio@1.2.0 preflight
+> node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/preflight.mjs
+
+BOX 1.2.0 — pré-verificação portfolio
+Configuração: estruturalmente válida
+Operação real: NÃO HOMOLOGADA. Emissão fiscal: BLOQUEADA.
+CÓDIGO — Separação entre demonstração e operação conectada: Portfólio isolado por sessão, sem dados ou conexões reais.
+CÓDIGO — Autenticação, MFA e autorização no código: Contas individuais no modo conectado; APIs e SQL verificam identidade e papel. Perfis da demo não são login.
+HOMOLOGAR — Migrações e RLS: Quatro migrações fornecidas. Aplicar em banco dedicado e validar via API/PostgREST com contas distintas.
+HOMOLOGAR — Homologar contas, MFA, SMTP e recuperação: Testar criação/revogação de acesso, recuperação por canal verificado, cookies e duas contas de cliente. Nada comprovado remotamente nesta entrega.
+CÓDIGO — NF-e de peças e NFS-e de serviços por OS: Rascunhos, snapshots, separação de itens e rateio em centavos. Simulações não geram XML nem documento autorizado.
+BLOQUEIO — Escolher, implementar e homologar o provedor: Contrato substituível e outbox no fonte; não há conector real, worker implantado ou webhooks habilitados. Uma variável não libera emissão.
+HOMOLOGAR — Validar empresa, município/UF e tributação: Contador deve validar regime, inscrições, códigos, retenções, cálculos e leiautes vigentes, incluindo mudanças tributárias aplicáveis. Sem padrões tributários presumidos.
+HOMOLOGAR — Credenciais e certificado em cofre: Provisionar somente no ambiente autorizado, fora do navegador, repositório e logs. Testar renovação e rotação. Não enviar pelo chat.
+HOMOLOGAR — Backup independente e restauração comprovada: Definir retenção, RPO/RTO e acesso; restaurar dados em ambiente isolado e registrar evidência. Exportação da sessão não é backup.
+HOMOLOGAR — HTTPS, reinício, observabilidade e retorno: Validar Node 22/Docker no destino, domínio autorizado, métricas/alertas, limites distribuídos, logs sem dados pessoais e plano de rollback.
+HOMOLOGAR — Homologar concorrência e carga no banco real: Testes locais de conexão única não comprovam concorrência, leasing da fila, capacidade, SLA ou recuperação do provedor.
+HOMOLOGAR — Dados comerciais, LGPD e aceite dos responsáveis: Validar identidade/contatos, termos, privacidade, retenção, atendimento, direitos de imagem e procedimentos da equipe.
+BLOQUEIO — Definir escopo das demais integrações reais: Captação pública, pagamentos, redes, mensagens e anexos privados continuam sem integração real. Contratar e desenvolver somente o que for aprovado.
+Requer pg_dump, age, sha256sum, PGSERVICE (credenciais em serviço/pgpass seguro), BOX_BACKUP_DIR absoluto fora do projeto e BOX_BACKUP_AGE_RECIPIENT (chave pública age). Gera .dump.age e checksum. Não comprova restauração.
+
+Build final de portfólio na instalação limpa: OK

@@ -3,15 +3,14 @@ import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import type { Role, Session } from '../model';
+import { inspectRuntimeConfiguration } from '../runtime-config';
 export class HttpError extends Error { constructor(message:string,public status=400,public code='REQUEST_ERROR'){super(message);} }
 export const isConnected=()=>process.env.APP_MODE==='connected';
 export function config(){
  if(!isConnected())throw new HttpError('API conectada desativada no portfólio. A demonstração usa somente dados fictícios locais.',403,'PORTFOLIO_ONLY');
- const url=process.env.SUPABASE_URL;const key=process.env.SUPABASE_PUBLISHABLE_KEY;const workspace=process.env.BOX_WORKSPACE_ID;const origin=process.env.APP_ORIGIN;
- if(!url||!key||!workspace||!origin)throw new HttpError('Ambiente conectado não configurado. Consulte o guia de implantação.',503,'NOT_CONFIGURED');
- if(process.env.NEXT_PUBLIC_APP_MODE!=='connected')throw new HttpError('Os modos de cliente e servidor não correspondem. Refaça a configuração e o build.',503,'MODE_MISMATCH');
- if(!/^https:\/\//.test(url)||!/^https?:\/\//.test(origin)||!/^[a-f0-9-]{36}$/i.test(workspace))throw new HttpError('Configuração do servidor inválida.',503,'NOT_CONFIGURED');
- if(process.env.NODE_ENV==='production'&&!origin.startsWith('https://'))throw new HttpError('HTTPS obrigatório no modo conectado.',503,'HTTPS_REQUIRED');
+ const report=inspectRuntimeConfiguration({...process.env,NEXT_PUBLIC_APP_MODE:process.env.NEXT_PUBLIC_APP_MODE});
+ if(!report.configured){const issue=report.issues[0];throw new HttpError(issue.message,503,issue.code);}
+ const url=process.env.SUPABASE_URL!;const key=process.env.SUPABASE_PUBLISHABLE_KEY!;const workspace=process.env.BOX_WORKSPACE_ID!;const origin=process.env.APP_ORIGIN!;
  return{url,key,workspace,origin:new URL(origin).origin};
 }
 export async function serverClient(){
@@ -36,7 +35,7 @@ export async function authContext(requireMfa=true){
  return{client,user:data.user,member,session};
 }
 export async function protectPage(){if(!isConnected())return;try{await authContext();}catch(e){if(e instanceof HttpError){if(e.code==='MFA_REQUIRED')redirect('/entrar/seguranca');redirect('/entrar');}throw e;}}
-export function requireOrigin(request:Request){const c=config();const origin=request.headers.get('origin');let parsed='';try{parsed=origin?new URL(origin).origin:'';}catch{}if(!origin||parsed!==c.origin)throw new HttpError('Origem da requisição não permitida.',403,'INVALID_ORIGIN');if(!/^application\/json(?:;|$)/i.test(request.headers.get('content-type')||''))throw new HttpError('Formato da requisição inválido.',415,'INVALID_CONTENT_TYPE');}
+export function requireOrigin(request:Request){const c=config();const origin=request.headers.get('origin');let parsed='';try{parsed=origin?new URL(origin).origin:'';}catch{}if(!origin||parsed!==c.origin||origin!==c.origin)throw new HttpError('Origem da requisição não permitida.',403,'INVALID_ORIGIN');if(!/^application\/json(?:;|$)/i.test(request.headers.get('content-type')||''))throw new HttpError('Formato da requisição inválido.',415,'INVALID_CONTENT_TYPE');}
 export async function jsonBody(request:Request){
  const limit=40000;const length=Number(request.headers.get('content-length')||0);if(length>limit)throw new HttpError('Requisição muito grande.',413);
  const reader=request.body?.getReader();const decoder=new TextDecoder();let size=0;let text='';

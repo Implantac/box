@@ -1,0 +1,211 @@
+{
+  "checkedAt": "2026-11-12T17:11:46.839941+00:00",
+  "url": "http://localhost:3001",
+  "transport": "HTTP local; não é verificação HTTPS pública",
+  "version": "1.1.0",
+  "health": {
+    "application": "box-oficina-portfolio",
+    "version": "1.1.0",
+    "mode": "portfolio",
+    "applicationReady": true,
+    "databaseConnection": "not-used",
+    "socialPublishing": "disabled"
+  },
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/cambio-automatico",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/bio",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/privacidade",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/entrar",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/entrar/seguranca",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/guia",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/ordens",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/clientes",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/agenda",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/atendimentos",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/orcamentos",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/financeiro",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/conteudo",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/relatorios",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/configuracoes",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/estoque",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/mecanicos",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/comissoes",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/cliente",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000042",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/painel/ordens/d0000000-0000-4000-8000-000000000043",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/api/health",
+      "status": 200,
+      "contentType": "application/json",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/api/site",
+      "status": 200,
+      "contentType": "application/json",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "contentType": "text/plain",
+      "noindexHeader": "noindex, nofollow",
+      "nosniff": true
+    },
+    {
+      "path": "/api/workspace",
+      "status": 403,
+      "expected": 403
+    },
+    {
+      "path": "/nao-existe-qa",
+      "status": 404,
+      "expected": 404
+    }
+  ],
+  "routes200": 26,
+  "localPortfolioVerified": true,
+  "published": false
+}

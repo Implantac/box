@@ -10,9 +10,14 @@ import { OrdersPage, OrderDetail } from './orders';
 import { CustomersPage, AgendaPage, LeadsPage } from './operations';
 import { QuotesPage, FinancePage } from './commercial';
 import { SocialPage } from './social';
+import { StockPage } from './stock';
+import { MechanicsPage } from './mechanics';
+import { CommissionsPage } from './commissions';
+import { FiscalPage } from './fiscal';
+import { ActivationPage } from './activation';
 import { ReportsPage, SettingsPage } from './settings-reports';
 export function Dashboard({ path = [] }: { path?: string[] }) {
  const {role,ready,portfolio,setRole}=useWorkspace();const section=path[0]||'inicio';
- const components:Record<string,React.ReactNode>={inicio:<Overview/>,ordens:path[1]?<OrderDetail orderId={path[1]}/>:<OrdersPage/>,clientes:<CustomersPage/>,agenda:<AgendaPage/>,atendimentos:<LeadsPage/>,orcamentos:<QuotesPage/>,financeiro:<FinancePage/>,conteudo:<SocialPage/>,relatorios:<ReportsPage/>,configuracoes:<SettingsPage/>};
+ const components:Record<string,React.ReactNode>={inicio:<Overview/>,ordens:path[1]?<OrderDetail orderId={path[1]}/>:<OrdersPage/>,clientes:<CustomersPage/>,agenda:<AgendaPage/>,atendimentos:<LeadsPage/>,orcamentos:<QuotesPage/>,financeiro:<FinancePage/>,estoque:<StockPage/>,mecanicos:<MechanicsPage/>,comissoes:<CommissionsPage/>,conteudo:<SocialPage/>,relatorios:<ReportsPage/>,configuracoes:<SettingsPage/>,fiscal:<FiscalPage/>,ativacao:<ActivationPage/>};
  return <DashboardShell section={section}>{!ready?<div className="loading-shell"><span className="spinner"/>Preparando sua experiência…</div>:!canSee(role,section)?<section className="panel access-denied"><Empty title="Este perfil tem outro foco." action={portfolio?<button className="btn btn-gold" onClick={()=>setRole('owner')}><ShieldCheck size={16}/>Explorar como proprietário</button>:<Link className="btn btn-gold" href={role==='customer'?'/cliente':'/painel'}>Ir para minha área <ArrowUpRight size={16}/></Link>}>O acesso a este módulo não está disponível para a função selecionada. No modo conectado, essa restrição também é aplicada pelo servidor.</Empty></section>:components[section]||<Empty title="Módulo não encontrado" action={<Link className="btn btn-gold" href="/painel">Voltar ao início</Link>}/>}</DashboardShell>;
 }

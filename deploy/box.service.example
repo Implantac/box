@@ -1,0 +1,33 @@
+# EXEMPLO Linux/systemd — revisar caminhos, usuário, cache, domínio e homologar no destino.
+# Copiar public/ e .next/static/ para o standalone ANTES de iniciar.
+# Criar usuário de serviço box; código somente leitura, cache gravável por box.
+# /etc/box/box.env: arquivo privado, root:root 0600. Nunca versionar valores reais.
+[Unit]
+Description=Box application
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=box
+Group=box
+WorkingDirectory=/srv/box/current/.next/standalone
+Environment=NODE_ENV=production
+Environment=HOSTNAME=0.0.0.0
+Environment=PORT=3000
+EnvironmentFile=/etc/box/box.env
+ExecStart=/usr/bin/node /srv/box/current/.next/standalone/server.js
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=-/srv/box/current/.next/standalone/.next/cache
+CapabilityBoundingSet=
+RestrictSUIDSGID=true
+
+[Install]
+WantedBy=multi-user.target

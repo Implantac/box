@@ -1,5 +1,12 @@
 # Segurança, privacidade e acesso
 
+## Complemento 1.2 — fiscal e pré-verificação
+
+A migração 004 acrescenta RLS para emitente/destinatários/documentos; apenas proprietário/financeiro leem o fiscal. Só proprietário altera emitente. API e SQL exigem MFA, papel, workspace/revisão e formato. O antigo comando fica privado. Simulações são rejeitadas no servidor/SQL. Outbox, claim e complete não são acessíveis aos papéis do navegador; não há service role no app web. Configuração rejeita origem com caminho/credenciais e chave privilegiada. Health/readiness não expõem valores de variáveis. Ver `FISCAL-CONTRATO.md` e `ATIVACAO-REAL.md`.
+
+O código e os testes locais **não** homologam operação real. Falta conector específico, produtor/runner e artefatos privados, credenciais em cofre e validação externa. Backups, limites distribuídos e monitoração exigem implantação no destino. O site publicado segue 1.1.1.
+
+
 ## Fronteira desta entrega
 
 Portfólio não comercial. A seleção de perfil e cliente na demonstração é um recurso de exploração, **não autenticação nem isolamento de segurança dentro da mesma sessão fictícia**. Não introduzir dados reais. Não há consulta pública por placa, anexos de OS, gateway de pagamento, disparos, analytics ou rastreadores externos.
@@ -12,7 +19,7 @@ O código conectado é uma base de homologação, não um ambiente comercial cer
 - Sessão consultada no servidor por `getUser()`. Cookies HttpOnly, SameSite=Lax e Secure em produção.
 - MFA TOTP/nível `aal2` exigido pelo app **e pelas funções/políticas SQL**, inclusive para chamadas diretas ao banco com JWT.
 - Vínculo `box_members` obtido do servidor, não do papel enviado pelo navegador. Sem autocadastro/autopromoção.
-- RLS e chaves compostas por workspace; cliente acessa somente registros próprios; técnico somente OS/agenda atribuídas; marketing somente conteúdo.
+- RLS e chaves compostas por workspace; cliente acessa somente registros próprios; técnico somente OS/agenda principais e OS em que tenha serviço próprio, além de seus registros operacionais vinculados; marketing somente conteúdo.
 - Escrita direta revogada para `anon` e `authenticated`; comandos transacionais validados por RPC com papel e vínculos verificados.
 - Funções privilegiadas com `search_path` vazio, nomes qualificados e grants explícitos. Funções de leitura operam sob RLS.
 - Bloqueio de linha do workspace e revisão esperada para concorrência. Conflito devolve 409; a interface pede atualização, sem sobrescrever silenciosamente.
@@ -31,15 +38,19 @@ Chaves privilegiadas não são exigidas nem incluídas. A chave publicável do S
 | Papel | Leitura | Escrita por comando |
 |---|---|---|
 | Proprietário | Todo o workspace e auditoria | Operações do workspace, inclusive aprovação de conteúdo e quatro campos do site |
-| Recepção | Clientes, veículos, OS, orçamentos, agenda, CRM | Cadastros, OS, orçamento/resposta com evidência, agenda, CRM |
-| Técnico | OS e agenda atribuídas ao seu nome individual | Acompanhamento/etapas da OS atribuída |
-| Financeiro | OS, orçamentos, recebimentos e custos | Recebimentos, estornos e custos; não aprova orçamento como cliente |
+| Recepção | Clientes, veículos, OS, orçamentos, agenda, CRM, peças/movimentos, equipe, ausências e serviços; **sem documentos de comissão** | Cadastros/OS/orçamentos/agenda/CRM, movimentos de estoque, reservas/baixas/devoluções, ausências e alocações; sem exceção financeira de comissão |
+| Técnico | OS e agenda principais; OS com serviço próprio; apenas seu cadastro, serviços e ausências vinculados ao `userId`; sem peças, orçamento ou comissão | Acompanhamento/etapas da OS principal e situação de seus próprios serviços; não edita diagnóstico/etapa da OS de outro responsável |
+| Financeiro | OS, orçamentos, recebimentos/custos, agenda/equipe/serviços, estoque e documentos de comissão; sem CRM/clientes gerais | Recebimentos/estornos/custos, cadastro de peças, regras de comissão, repasses/estornos/correções; não movimenta estoque ou aprova orçamento como cliente |
 | Conteúdo | Posts revisáveis | Criar/editar rascunho; aprovação exclusiva do proprietário |
 | Cliente | Próprio cadastro/veículos/OS e versões disponibilizadas | Aprovar/recusar a versão atual enviada, sem editar valores ou histórico |
 
 A matriz de módulos da interface não substitui a matriz de dados. A resposta de workspace já é filtrada no banco no modo conectado. As informações institucionais não sigilosas do workspace são legíveis por seus membros. A RPC pública do site retorna **somente** título, subtítulo, nome de apresentação e região; não retorna agenda, OS, contatos, auditoria ou conteúdo privado.
 
-As atribuições técnicas usam `display_name` com unicidade, não um UUID de técnico em cada OS. Mudanças de nome exigem manutenção dos vínculos. Esta é uma limitação conhecida a evoluir, não uma integração de RH completa.
+As atribuições principais de OS/agenda ainda usam `display_name` único. Os novos serviços apontam para o UUID do mecânico; a identidade técnica exige seu `userId` correspondente ao Auth. O formulário não cria contas nem altera vínculos existentes. Mudanças de nome/conta exigem provisionamento/migração administrativa planejada, não uma integração de RH completa.
+
+Comissões e suas regras/repasses ficam em documentos separados. O identificador de retry operacional do serviço **não carrega o valor da exceção de comissão**. A autorização da exceção ocorre antes de comparar retries, para que a recepção não use respostas de duplicidade para testar valores privados. Helpers internos e o entrypoint antigo são revogados; os três helpers de vínculo/leitura necessários à RLS não confirmam dados sem MFA.
+
+Reservas, baixas, devoluções e repasses são append-only; unidade de peça usada e fotografias de custo/comissão são preservadas. Cancelamentos/revisões geram histórico, não excluem lançamentos. A busca só indexa campos operacionais previstos e respeita módulos/vínculos; termos ficam em memória, URLs de recorte usam IDs. Tudo isso continua sendo exploração, não segurança dentro da sessão pública da demo.
 
 ## Matriz obrigatória antes de uso real
 
@@ -50,11 +61,12 @@ Em homologação dedicada e por quem administra o destino:
 3. Verificar atributos dos cookies no HTTPS final e ausência de tokens em URL/logs; testar renovação pelo proxy.
 4. Pela API e PostgREST, tentar ler outro workspace, ler outra OS, trocar `customer_id`, papel ou workspace no JSON, escrever tabelas diretamente, executar comando fora do papel e acessar orçamento rascunho.
 5. Repetir autorizações com cliente errado/versão antiga/OS encerrada. Tentar alterar itens após aprovação. Preservar recusas e evidência de quem respondeu.
-6. Submeter duas versões ou horários simultâneos; confirmar conflito e ausência de duplicata. Testar envio duplicado de lançamento e ID reutilizado com valor diferente.
+6. Submeter reservas, baixas, repasses, versões e horários simultâneos **em conexões PostgreSQL reais separadas**; confirmar conflito e ausência de duplicata. Testar envio duplicado de lançamento e ID reutilizado com valor diferente.
 7. Forçar indisponibilidade de banco/rede, 401/403/409/422/429/503 e conferir mensagem e ausência de sucesso falso.
 8. Validar origem, limites do corpo, formato JSON, carga, CSP, cookies, cache, headers e proxy confiável no endereço real.
 9. Restaurar backup em destino separado e comparar vínculos, permissões, conteúdo, auditoria e Auth. Não testar restaurando por cima da origem.
-10. Aprovar conteúdo comercial, retenção, atendimento aos titulares, canais e responsáveis. Só depois considerar um escopo de produção, com autorização separada.
+10. Validar técnico em serviço próprio e alheio, recepção sem comissões também por SELECT/RPC, retry financeiro e unidades/custos históricos. O teste local de revisão usa fila PGlite de conexão única, não é ensaio multiconexão.
+11. Aprovar conteúdo comercial, retenção, atendimento aos titulares, canais e responsáveis. Só depois considerar um escopo de produção, com autorização separada.
 
 ## LGPD e retenção
 

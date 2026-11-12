@@ -1,0 +1,101 @@
+{
+  "recordedAt": "2026-11-12T18:38:21.001019+00:00",
+  "version": "1.1.0",
+  "project": "box-portfolio",
+  "project_id": "prj_s2lz8fMNbxGAR6qJye5KHu5gxBFc",
+  "team_id": "team_1A1MXMKRlbBUFJJTs5xjNKrk",
+  "public_url": "https://box-portfolio-orpin.vercel.app",
+  "deployment_id": "dpl_FJeBwpr2YfyojHSV53HdXexGV7k4",
+  "deployment_url": "https://box-portfolio-4ilrbw355-implantacs-projects.vercel.app",
+  "inspector_url": "https://vercel.com/implantacs-projects/box-portfolio/FJeBwpr2YfyojHSV53HdXexGV7k4",
+  "state": "READY",
+  "promotion_state": "PROMOTED",
+  "target": "production",
+  "source": "cli",
+  "createdAt": "2026-11-12T18:32:17.863Z",
+  "readyAt": "2026-11-12T18:32:59.822Z",
+  "buildNodeVersion": "22.x",
+  "projectConfiguredNodeVersion": "26.x",
+  "nodeSelectionNote": "O engines.node=22.x do pacote prevaleceu sobre o padrão 26.x; confirmado no log remoto e no deployment.",
+  "plan": "hobby",
+  "sourcePackage": {
+    "file": "Box-Portfolio-Portatil-v1.1.zip",
+    "sha256": "d330a9895739c2909b6fdb920be988039fdc9af4c48d46f260f1a480a7a40071",
+    "projectSubdirectory": "projeto/",
+    "validatedSourceHashesVerified": 83,
+    "cliUploadFiles": 147,
+    "runtimeSourceChangedForPublication": false,
+    "deliveredZipChanged": false
+  },
+  "git": {
+    "repository": "https://github.com/Implantac/box",
+    "branch": "main",
+    "currentCommit": "f261c49b4c302f9894dce1f1b04cc2966890f746",
+    "updated": false,
+    "deployedCommit": null,
+    "autoDeployEnabled": false,
+    "note": "Publicação manual dos arquivos 1.1; não veio de novo commit. Antes de redeployar main, sincronizar a versão 1.1 para evitar retorno à 1.0."
+  },
+  "publicHttps": {
+    "anonymous": true,
+    "certificateVerified": true,
+    "routes200": 26,
+    "workspaceStatus": 403,
+    "missingPathStatus": 404,
+    "noindex": true,
+    "robotsDisallowAll": true,
+    "health": {
+      "application": "box-oficina-portfolio",
+      "version": "1.1.0",
+      "mode": "portfolio",
+      "applicationReady": true,
+      "databaseConnection": "not-used",
+      "socialPublishing": "disabled"
+    },
+    "evidence": "projeto/docs/qa/vercel-https-v1.1.json"
+  },
+  "browserTests": {
+    "passed": 92,
+    "unexpected": 0,
+    "skipped": 0,
+    "flaky": 0,
+    "startTime": "2026-11-12T18:33:51.880Z",
+    "durationMs": 170755.571,
+    "profiles": [
+      "Chromium desktop 1440x1000",
+      "Pixel 7 emulado 390x844"
+    ],
+    "evidence": "projeto/docs/qa/playwright-deploy-v1.1.json",
+    "log": "projeto/docs/qa/playwright-deploy-v1.1.log",
+    "testsOrApplicationChangedForRemoteRun": false
+  },
+  "smoke": {
+    "passed": true,
+    "browserErrors": [],
+    "evidence": "projeto/docs/qa/deploy-v1.1.0-smoke.json"
+  },
+  "safety": {
+    "agrotechModifiedByThisTask": false,
+    "otherProjectsModified": false,
+    "newProjectCreated": false,
+    "paidServicesContracted": false,
+    "remoteDatabaseCreatedOrMigrated": false,
+    "realDataUsed": false,
+    "socialPublishingEnabled": false,
+    "deploymentProtectionChanged": false,
+    "protectionBypassed": false,
+    "technicalAliasStatuses": [
+      302,
+      302
+    ],
+    "temporaryCliLogoutSucceeded": true,
+    "temporaryAuthDirectoryRemoved": true
+  },
+  "historicalDeployment": "dpl_EkWdWfCcz7vBgUdDAuMy29uH9xs3",
+  "historicalRecordPreserved": "vercel-deploy-box.json",
+  "notes": [
+    "A fonte portátil e seus hashes continuam os mesmos.",
+    "O ZIP entregue foi gerado antes da autorização de publicação; este registro complementa o estado histórico da documentação interna.",
+    "92 testes remotos não homologam Auth/MFA/PostgREST/SMTP, concorrência multiconexão, backup externo, Docker ou Hostinger."
+  ]
+}

@@ -1,0 +1,1 @@
+Requer pg_dump, age, sha256sum, PGSERVICE (credenciais em serviço/pgpass seguro), BOX_BACKUP_DIR absoluto fora do projeto e BOX_BACKUP_AGE_RECIPIENT (chave pública age). Gera .dump.age e checksum. Não comprova restauração.

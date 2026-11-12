@@ -1,0 +1,5 @@
+
+> box-oficina-portfolio@1.2.0 test
+> vitest run --reporter=json --outputFile=/home/user/box-apucarana/projeto/docs/qa/vitest-v1.2.json
+
+JSON report written to /home/user/box-apucarana/projeto/docs/qa/vitest-v1.2.json

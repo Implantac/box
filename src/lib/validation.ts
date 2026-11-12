@@ -1,4 +1,6 @@
 import { z } from 'zod';
+import { workshopCommandSchemas } from './workshop-validation';
+import { fiscalCommandSchemas } from './fiscal-validation';
 const uuid=z.uuid();
 const date=z.iso.date();
 const datetime=z.iso.datetime({offset:true});
@@ -9,7 +11,7 @@ const channel=z.enum(['instagram','facebook','youtube']);
 export const customerSchema=z.strictObject({id:uuid,name:text(3,120),email:z.union([z.literal(''),z.email().max(254)]),phone:text(0,40),notes:text(0,1000),createdAt:datetime});
 export const vehicleSchema=z.strictObject({id:uuid,customerId:uuid,model:text(2,120),year:z.number().int().min(1900).max(2100),plate:text(0,16),km:z.number().int().min(0).max(3000000)});
 const orderSchema=z.strictObject({id:uuid,number:text(3,40),customerId:uuid,customerName:text(0,120),vehicleId:uuid,vehicleLabel:text(0,160),status:z.literal('recepcao'),complaint:text(5,3000),diagnosis:text(0,3000),technician:text(2,120),dueDate:date,createdAt:datetime,returnOf:uuid.optional(),checklist:z.array(text(1,120)).max(10)});
-const quoteSchema=z.strictObject({id:uuid,orderId:uuid,version:z.number().int().positive().max(10000),status:z.literal('rascunho'),items:z.array(z.strictObject({description:text(3,200),kind:z.enum(['peca','servico']),quantity:z.number().int().min(1).max(999),unitCents:cents})).min(1).max(30),discountCents:cents,terms:text(10,2000),createdAt:datetime});
+const quoteSchema=z.strictObject({id:uuid,orderId:uuid,version:z.number().int().positive().max(10000),status:z.literal('rascunho'),items:z.array(z.strictObject({id:z.string().min(1).max(80).regex(/^(?:[0-9a-fA-F-]{36}|legacy:[0-9a-fA-F-]{36}:\d{1,2})$/).optional(),partId:uuid.optional(),description:text(3,200),kind:z.enum(['peca','servico']),quantity:z.number().int().min(1).max(999),unitCents:cents})).min(1).max(30),discountCents:cents,terms:text(10,2000),createdAt:datetime});
 const appointmentSchema=z.strictObject({id:uuid,customerId:uuid,customerName:text(0,120),vehicleLabel:text(1,160),service:text(3,200),startsAt:datetime,duration:z.number().int().min(15).max(480),technician:text(2,120),status:z.enum(['solicitado','confirmado'])});
 const paymentSchema=z.strictObject({id:uuid,orderId:uuid,amountCents:cents.positive(),method:z.enum(['pix','cartao','dinheiro']),kind:z.enum(['recebimento','estorno']),note:text(0,500),createdAt:datetime});
 const costSchema=z.strictObject({id:uuid,orderId:uuid,description:text(3,200),amountCents:cents.positive(),createdAt:datetime});
@@ -29,7 +31,9 @@ export const commandSchema=z.discriminatedUnion('type',[
  z.strictObject({type:z.literal('set_lead_status'),id:uuid,status:z.enum(['novo','em_contato','convertido','perdido']),nextAction:text(0,250).optional()}),
  z.strictObject({type:z.literal('save_post'),post:postSchema}),z.strictObject({type:z.literal('approve_post'),id:uuid}),
  z.strictObject({type:z.literal('simulate_post'),id:uuid,failChannel:channel.optional(),scheduleAt:datetime.optional()}),z.strictObject({type:z.literal('cancel_post_schedule'),id:uuid}),
- z.strictObject({type:z.literal('update_settings'),settings:settingsSchema})
+ z.strictObject({type:z.literal('update_settings'),settings:settingsSchema}),
+ ...workshopCommandSchemas,
+ ...fiscalCommandSchemas
 ]);
 export const workspaceRequestSchema=z.strictObject({revision:z.number().int().positive().max(2147483000),command:commandSchema});
 export const loginSchema=z.strictObject({email:z.email().max(254),password:z.string().min(8).max(256)});

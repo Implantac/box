@@ -1,0 +1,114 @@
+/* BOX 1.1 — os novos módulos acompanham a identidade e os padrões de foco existentes. */
+.workshop-stats .stat-bottom{white-space:normal;min-height:34px;align-items:flex-start}
+.workshop-toolbar{align-items:center;flex-wrap:wrap;gap:14px}
+.workshop-toolbar .tabs{flex-wrap:wrap;max-width:100%}
+.workshop-toolbar .button-row{margin:0;flex-wrap:wrap}
+.workshop-filters{display:flex;gap:9px;flex-wrap:wrap;max-width:100%}
+.workshop-filters select{width:auto;max-width:280px;min-height:38px;font-size:11px}
+.workshop-panel-heading{flex-wrap:wrap}
+.stock-low-filter{font-size:11px;margin:0;color:#526057}
+.stock-low-filter input{width:15px;min-height:15px}
+.table-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;min-width:115px}
+.table-actions .btn{white-space:nowrap}
+.stock-table td{vertical-align:top}
+.stock-table td:first-child{min-width:220px;max-width:310px;white-space:normal}
+.stock-table td:first-child>b,.stock-movement-name{display:block;margin:6px 0}
+.stock-table .muted{max-width:310px;white-space:normal;overflow-wrap:anywhere;line-height:1.8}
+.stock-table th{white-space:nowrap}
+.stock-balance-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid #e1e7d8;border-radius:7px;background:#f6f8f1;padding:14px;gap:10px}
+.stock-balance-strip span{font-size:11px;color:#526057}
+.stock-balance-strip b{display:block;margin-top:7px;font-size:22px;color:#3e5733}
+.stock-explanation{margin:16px 0 0!important;font-size:11px;line-height:1.9}
+.inline-warning{padding:13px 15px;background:#fbf4e5;border:1px solid #e8d8b8;border-radius:6px;color:#78551f;font-size:11px;line-height:1.9;margin:12px 0}
+.quote-part-link{grid-column:1/-1;background:#f4f7ed;border:1px solid #e5eadc;border-radius:6px;padding:12px;margin:2px 0 5px}
+.quote-part-link select{font-size:11px;width:100%}
+.capacity-reference{padding:17px 20px;display:flex;gap:18px;align-items:center;justify-content:space-between;margin-bottom:22px;overflow:visible}
+.capacity-reference>div{display:flex;gap:12px;align-items:center}
+.capacity-reference>div>svg{color:#876b33;flex-shrink:0}
+.capacity-reference b{font-size:12px;color:#42573a}
+.capacity-reference p{font-size:11px;margin-top:5px;line-height:1.6}
+.capacity-reference input{font-size:11px;max-width:245px}
+.capacity-reference label{margin-left:auto}
+.mechanic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.mechanic-card{padding:22px;position:relative;border-top:3px solid #a6b79c;display:flex;flex-direction:column;min-height:350px}
+.mechanic-card.mechanic-free{border-top-color:#6e8a5c}
+.mechanic-card.mechanic-busy{border-top-color:#ba9c58}
+.mechanic-card.mechanic-away{border-top-color:#a79ab9}
+.mechanic-card-top{display:flex;align-items:center;gap:11px;margin-bottom:21px}
+.mechanic-card-top h2{font-size:17px;color:#3e5733;font-weight:750;letter-spacing:-.4px}
+.mechanic-card-top small{display:block;font-size:11px;color:#526057;margin-top:5px}
+.mechanic-card-top .icon-button{margin-left:auto;flex-shrink:0}
+.mechanic-avatar{width:43px;height:43px;border-radius:12px;display:grid;place-items:center;background:#f0f3e8;border:1px solid #dce4cf;color:#526941;font-weight:750;font-size:14px;flex-shrink:0}
+.mechanic-card>.badge{align-self:flex-start}
+.mechanic-state-detail{font-size:11px;line-height:1.9;min-height:43px;margin:12px 0 20px;overflow-wrap:anywhere}
+.mechanic-work-counts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;padding-bottom:19px;border-bottom:1px solid #edf0e7}
+.mechanic-work-counts b{font-size:21px;display:block;color:#4d663f}
+.mechanic-work-counts span{display:block;font-size:11px;color:#526057;margin-top:5px;line-height:1.7}
+.mechanic-next{display:flex;gap:9px;align-items:flex-start;padding:19px 0;color:#526057;flex:1}
+.mechanic-next>svg{flex-shrink:0;margin-top:1px}
+.mechanic-next b{font-size:11px;font-weight:650;line-height:1.8;display:block}
+.mechanic-next small{font-size:11px;display:block;margin-top:5px;line-height:1.8}
+.mechanic-card-actions{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid #edf0e7;padding-top:16px}
+.mechanic-card-actions .text-button{font-size:11px}
+.services-table td{vertical-align:top}
+.services-table td:first-child{min-width:220px;max-width:300px;white-space:normal}
+.services-table td:first-child .text-button{display:block;line-height:1.8;font-size:11px}
+.services-table td:first-child small{display:block;margin:6px 0}
+.inline-service-link{display:flex!important;gap:5px;align-items:center;font-size:11px;color:#526057}
+.service-actions{min-width:140px}
+.service-blocked{font-size:11px;line-height:1.7;margin-top:8px;display:block;color:#78551f}
+.service-money-preview{border:1px solid #e3e8d9;background:#f7f9f2;border-radius:7px;padding:15px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:11px;color:#526057}
+.service-money-preview strong{font-size:21px;color:#4b653d;white-space:nowrap}
+.service-detail-summary>p{font-size:12px;line-height:1.9;margin-top:12px}
+.service-history{padding:8px 0}
+.service-history>div{display:flex;align-items:flex-start;gap:13px;padding:14px 0;border-bottom:1px solid #edf0e5}
+.service-history .audit-dot{margin-top:6px}
+.service-history b{font-size:12px;color:#415a36}
+.service-history p{font-size:11px;line-height:1.9;margin:6px 0}
+.service-history small{font-size:11px;color:#526057}
+.commission-snapshots h3{font-size:13px;margin:15px 0}
+.commission-snapshots>div{display:flex;gap:12px;padding:14px 0;align-items:flex-start;border-top:1px solid #e7ebdf;font-size:11px;line-height:1.9}
+.commission-snapshots>div>span:nth-child(2){flex:1}
+.commission-snapshots small{display:block;font-size:11px;color:#526057;margin-top:4px}
+.commission-snapshots strong{white-space:nowrap;color:#4b653d}
+.commission-policy-banner{display:flex;align-items:flex-start;gap:13px;background:#eff3e6;border:1px solid #dce5ce;border-radius:8px;padding:17px 20px;margin-bottom:23px}
+.commission-policy-banner>svg{color:#6d7542;flex-shrink:0;margin-top:3px}
+.commission-policy-banner p{font-size:11px;line-height:2}
+.commission-policy-banner b{color:#4c603c}
+.commission-filters{padding:17px 20px;display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:23px}
+.commission-filters label{flex:1;min-width:145px}
+.commission-filters label:first-child{min-width:200px}
+.commission-filters label>span{font-size:11px;display:block;margin-bottom:8px;color:#526057;font-weight:650}
+.commission-filters input,.commission-filters select{font-size:11px;min-height:37px}
+.commissions-table td{vertical-align:top}
+.commissions-table td:first-child{min-width:210px;max-width:290px}
+.commissions-table td:nth-child(2){min-width:165px}
+.commissions-table .muted{white-space:normal;max-width:280px;line-height:1.9}
+.commission-actions{min-width:135px;flex-direction:column;align-items:flex-start}
+.integrated-cost-summary{display:flex;gap:25px;align-items:center;flex-wrap:wrap;padding:20px 22px;background:#f6f8f0;border-top:1px solid #e1e7d7}
+.integrated-cost-summary>span{font-size:11px;color:#526057}
+.integrated-cost-summary b{display:block;font-size:17px;color:#4b653d;margin-top:7px}
+.workshop-pulse{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin:0 0 25px}
+.workshop-pulse>a{padding:17px 19px;border:1px solid #dfe6d6;border-radius:8px;background:#f0f4e8;display:flex;align-items:center;gap:12px;min-width:0;transition:border-color .2s}
+.workshop-pulse>a:hover{border-color:#b9c7a7}
+.workshop-pulse>a>svg{color:#667d52;flex-shrink:0}
+.workshop-pulse>a>div{flex:1;min-width:0}
+.workshop-pulse b{font-size:12px;color:#435b37;line-height:1.7}
+.workshop-pulse small{display:block;font-size:11px;color:#526057;margin-top:5px;line-height:1.8}
+.agenda-services{margin-top:24px}
+@media(min-width:1650px){.mechanic-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:1200px){.mechanic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.workshop-pulse{grid-template-columns:repeat(2,minmax(0,1fr))}.capacity-reference{flex-wrap:wrap}.capacity-reference>div{flex:1;min-width:220px}.capacity-reference label{margin-left:0}.workshop-stats .stat-card>strong{font-size:25px}}
+@media(max-width:760px){.workshop-stats{gap:12px}.workshop-stats .stat-card{padding:16px 14px 13px}.workshop-stats .stat-card>strong{font-size:22px}.workshop-stats .stat-top{gap:7px;min-height:35px;align-items:flex-start}.workshop-stats .stat-icon{width:27px;height:27px}.workshop-stats .stat-bottom{font-size:11px;min-height:42px}.workshop-toolbar{display:flex;align-items:stretch;margin-bottom:17px}.workshop-toolbar .tabs{width:100%;gap:5px}.workshop-toolbar .tabs button{font-size:11px;min-height:39px;padding:9px 10px}.workshop-filters{display:grid;grid-template-columns:1fr;width:100%}.workshop-filters select{max-width:100%;width:100%}.workshop-toolbar>.button-row{width:100%}.capacity-reference{padding:17px;gap:15px;margin-bottom:19px}.capacity-reference>div{min-width:0;width:100%;flex-basis:100%}.capacity-reference label{width:100%;display:block}.capacity-reference input{width:100%;max-width:100%}.capacity-reference .btn{width:100%}.mechanic-grid{grid-template-columns:minmax(0,1fr);gap:15px}.mechanic-card{padding:20px;min-height:330px}.mechanic-state-detail{min-height:0}.mechanic-card-top h2{font-size:19px}.mechanic-work-counts b{font-size:22px}.mechanic-card-actions .btn{min-height:38px}.commission-policy-banner{padding:16px;gap:11px}.commission-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:16px;gap:15px}.commission-filters label{min-width:0!important}.commission-filters label:first-child{grid-column:1/-1}.commission-filters input,.commission-filters select{min-width:0;width:100%;max-width:100%}.commission-filters label:last-child:has(select){grid-column:1/-1}.service-money-preview{align-items:flex-start;flex-direction:column;gap:8px}.commission-snapshots>div{flex-wrap:wrap}.commission-snapshots>div>span:nth-child(2){min-width:150px}.workshop-pulse{grid-template-columns:minmax(0,1fr);gap:11px;margin-bottom:21px}.workshop-pulse>a{padding:16px 17px}.stock-balance-strip{padding:12px;gap:9px}.stock-balance-strip b{font-size:21px}.workshop-panel-heading{padding:17px}.workshop-panel-heading .search-field{width:100%}.quote-part-link{padding:11px}.quote-part-link select{min-width:0}.stock-table td:first-child{min-width:210px}.integrated-cost-summary{padding:18px;gap:21px}.stock-low-filter{line-height:1.8}.agenda-services .panel-heading{align-items:flex-start}}
+
+/* Busca por registros: termos ficam na memória; URLs usam apenas identificadores. */
+.dashboard-tools .mobile-search-button{display:none}
+.search-results{max-height:60vh;overflow-y:auto}
+.search-results>a{gap:12px}
+.search-results>a>span{min-width:0;overflow-wrap:anywhere}
+.modal-search-results>a{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 6px;border-bottom:1px solid #e2e7d9;font-size:12px;color:#526057}
+.modal-search-results b{display:block;line-height:1.8;font-size:12px;margin-top:5px}
+.modal-search-results p{font-size:12px;line-height:1.9;color:#526057}
+.modal-search-results svg{flex-shrink:0}
+.search-scope-note{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;padding:14px 18px;background:#edf3e3;border:1px solid #d7e1ca;border-radius:7px;margin-bottom:20px;font-size:12px;line-height:1.9;color:#435b37}
+.search-scope-note a{display:inline-flex;align-items:center;gap:6px;text-decoration:underline;font-weight:650}
+@media(max-width:760px){.dashboard-tools .mobile-search-button{display:inline-flex}.search-scope-note{padding:14px}}

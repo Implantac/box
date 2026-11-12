@@ -1,0 +1,80 @@
+{
+  "checkedAt": "2026-11-12T18:33:29.960Z",
+  "url": "https://box-portfolio-orpin.vercel.app",
+  "expectedVersion": "1.1.0",
+  "anonymous": true,
+  "checks": [
+    {
+      "path": "/api/health",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "h1": "Precisão em cada detalhe.\nConfiança em cada etapa.\n",
+      "noHorizontalOverflow": true
+    },
+    {
+      "path": "/cambio-automatico",
+      "status": 200,
+      "h1": "Menos dúvidas.\nMais clareza sobre\no seu câmbio.",
+      "noHorizontalOverflow": true
+    },
+    {
+      "path": "/painel",
+      "status": 200,
+      "h1": "O dia começa com clareza.",
+      "noHorizontalOverflow": true
+    },
+    {
+      "path": "/painel/ordens",
+      "status": 200,
+      "h1": "Ordens de serviço",
+      "noHorizontalOverflow": true
+    },
+    {
+      "path": "/painel/conteudo",
+      "status": 200,
+      "h1": "Uma ideia. Vários destinos.",
+      "noHorizontalOverflow": true
+    },
+    {
+      "path": "/painel/estoque",
+      "status": 200,
+      "h1": "Peças no lugar certo.",
+      "noHorizontalOverflow": true
+    },
+    {
+      "path": "/painel/mecanicos",
+      "status": 200,
+      "h1": "Equipe, tempo e execução.",
+      "noHorizontalOverflow": true
+    },
+    {
+      "path": "/painel/comissoes",
+      "status": 200,
+      "h1": "Serviço feito. Comissão clara.",
+      "noHorizontalOverflow": true
+    },
+    {
+      "path": "/cliente",
+      "status": 200,
+      "h1": "Olá, Clara.\nCada etapa, mais clara.",
+      "noHorizontalOverflow": true
+    }
+  ],
+  "browserErrors": [],
+  "publicPortfolioVerified": true,
+  "health": {
+    "application": "box-oficina-portfolio",
+    "version": "1.1.0",
+    "mode": "portfolio",
+    "applicationReady": true,
+    "databaseConnection": "not-used",
+    "socialPublishing": "disabled"
+  },
+  "fictionalFormToCrm": true,
+  "fictionalPortalApproval": true,
+  "mobileNavigation": true,
+  "noindex": true
+}

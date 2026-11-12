@@ -1,0 +1,107 @@
+{
+  "version": "1.2.0",
+  "target": "connected",
+  "configured": false,
+  "mode": "portfolio",
+  "configurationIssues": [
+    {
+      "code": "TARGET_MODE_MISMATCH",
+      "message": "Para avaliar a operação conectada, configure os dois modos como connected em um ambiente separado."
+    }
+  ],
+  "productionApproved": false,
+  "fiscalIssuance": "disabled",
+  "checks": [
+    {
+      "id": "modes",
+      "area": "Ambiente",
+      "label": "Separação entre demonstração e operação conectada",
+      "status": "implemented",
+      "detail": "Portfólio isolado por sessão, sem dados ou conexões reais."
+    },
+    {
+      "id": "access-code",
+      "area": "Acesso",
+      "label": "Autenticação, MFA e autorização no código",
+      "status": "implemented",
+      "detail": "Contas individuais no modo conectado; APIs e SQL verificam identidade e papel. Perfis da demo não são login."
+    },
+    {
+      "id": "schema",
+      "area": "Dados",
+      "label": "Migrações e RLS",
+      "status": "verify",
+      "detail": "Quatro migrações fornecidas. Aplicar em banco dedicado e validar via API/PostgREST com contas distintas."
+    },
+    {
+      "id": "auth-live",
+      "area": "Acesso",
+      "label": "Homologar contas, MFA, SMTP e recuperação",
+      "status": "verify",
+      "detail": "Testar criação/revogação de acesso, recuperação por canal verificado, cookies e duas contas de cliente. Nada comprovado remotamente nesta entrega."
+    },
+    {
+      "id": "tax-flow",
+      "area": "Fiscal",
+      "label": "NF-e de peças e NFS-e de serviços por OS",
+      "status": "implemented",
+      "detail": "Rascunhos, snapshots, separação de itens e rateio em centavos. Simulações não geram XML nem documento autorizado."
+    },
+    {
+      "id": "provider",
+      "area": "Fiscal",
+      "label": "Escolher, implementar e homologar o provedor",
+      "status": "blocked",
+      "detail": "Contrato substituível e outbox no fonte; não há conector real, worker implantado ou webhooks habilitados. Uma variável não libera emissão."
+    },
+    {
+      "id": "tax-rules",
+      "area": "Fiscal",
+      "label": "Validar empresa, município/UF e tributação",
+      "status": "verify",
+      "detail": "Contador deve validar regime, inscrições, códigos, retenções, cálculos e leiautes vigentes, incluindo mudanças tributárias aplicáveis. Sem padrões tributários presumidos."
+    },
+    {
+      "id": "secrets",
+      "area": "Segurança",
+      "label": "Credenciais e certificado em cofre",
+      "status": "verify",
+      "detail": "Provisionar somente no ambiente autorizado, fora do navegador, repositório e logs. Testar renovação e rotação. Não enviar pelo chat."
+    },
+    {
+      "id": "backup",
+      "area": "Operação",
+      "label": "Backup independente e restauração comprovada",
+      "status": "verify",
+      "detail": "Definir retenção, RPO/RTO e acesso; restaurar dados em ambiente isolado e registrar evidência. Exportação da sessão não é backup."
+    },
+    {
+      "id": "deployment",
+      "area": "Infraestrutura",
+      "label": "HTTPS, reinício, observabilidade e retorno",
+      "status": "verify",
+      "detail": "Validar Node 22/Docker no destino, domínio autorizado, métricas/alertas, limites distribuídos, logs sem dados pessoais e plano de rollback."
+    },
+    {
+      "id": "concurrency",
+      "area": "Qualidade",
+      "label": "Homologar concorrência e carga no banco real",
+      "status": "verify",
+      "detail": "Testes locais de conexão única não comprovam concorrência, leasing da fila, capacidade, SLA ou recuperação do provedor."
+    },
+    {
+      "id": "legal",
+      "area": "Operação",
+      "label": "Dados comerciais, LGPD e aceite dos responsáveis",
+      "status": "verify",
+      "detail": "Validar identidade/contatos, termos, privacidade, retenção, atendimento, direitos de imagem e procedimentos da equipe."
+    },
+    {
+      "id": "external",
+      "area": "Integrações",
+      "label": "Definir escopo das demais integrações reais",
+      "status": "blocked",
+      "detail": "Captação pública, pagamentos, redes, mensagens e anexos privados continuam sem integração real. Contratar e desenvolver somente o que for aprovado."
+    }
+  ]
+}
